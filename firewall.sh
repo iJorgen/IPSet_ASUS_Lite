@@ -48,8 +48,8 @@ loginvalid="disabled"	# enabled | disabled
 blocklist_set="		<binarydefense>			https://www.binarydefense.com/banlist.txt  {4}
 					<blocklist.de>			https://iplists.firehol.org/files/blocklist_de.ipset  {4}
 					<ciarmy>				https://iplists.firehol.org/files/ciarmy.ipset  {4}
-					<cybercrime>			https://iplists.firehol.org/files/cybercrime.ipset  {4}
 					<dshield>				https://iplists.firehol.org/files/dshield_7d.netset  {4}
+					<fireholwebclient>		https://iplists.firehol.org/files/firehol_webclient.netset  {4}
 					<greensnow>				https://iplists.firehol.org/files/greensnow.ipset  {4}
 					<myip>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {4}
 					<spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {12}
