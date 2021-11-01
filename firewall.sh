@@ -49,21 +49,21 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="		<alienvault>			https://iplists.firehol.org/files/alienvault_reputation.ipset  {4}
-					<binarydefense>			https://www.binarydefense.com/banlist.txt  {4}
-					<blocklist.de>			https://iplists.firehol.org/files/blocklist_de.ipset  {4}
-					<ciarmy>				https://iplists.firehol.org/files/ciarmy.ipset  {4}
-					<ciscotalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
-					<cruzitwebattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {4}
-					<dshield>				https://iplists.firehol.org/files/dshield.netset  {4}
-					<dshieldtop1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {4}
-					<emergingthreats>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
-					<fireholwebclient>		https://iplists.firehol.org/files/firehol_webclient.netset  {4}
-					<greensnow>				https://iplists.firehol.org/files/greensnow.ipset  {4}
-					<myip>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {4}
-					<spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {12}
-					<spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {12}
-					<tor_exits>				https://iplists.firehol.org/files/tor_exits.ipset  {12}"
+blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_reputation.ipset  {1}
+					<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4}
+					<Blocklist.de>			https://iplists.firehol.org/files/blocklist_de.ipset  {1}
+					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
+					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
+					<CruzitWebattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {1}
+					<Dshield>				https://iplists.firehol.org/files/dshield.netset  {1}
+					<DshieldTop1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {1}
+					<EmergingThreats>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
+					<FireholWebclient>		https://iplists.firehol.org/files/firehol_webclient.netset  {1}
+					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
+					<MyIP>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {4}
+					<Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {12}
+					<Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {12}
+					<TOR_exits>				https://iplists.firehol.org/files/tor_exits.ipset  {1}"
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
