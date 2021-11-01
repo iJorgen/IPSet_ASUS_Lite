@@ -2,9 +2,13 @@
 #  ___ _                 _     _    _ _
 # / __| |___  _ _ _  ___| |_  | |  (_) |_ ___
 # \__ \ / / || | ' \/ -_)  _| | |__| |  _/ -_)
-# |___/_\_\\_, |_||_\___|\__| |____|_|\__\___|
+# |___/_\_\\_, |_||_\___|\__| |____|_|\__\___|  FORTKNOX EDITION
 #          |__/
 #
+#   Skynet Lite (FortKnox edition) by iJorgen
+#   IP Blocking For ASUS Routers Using IPSet (with additional blocklists)
+#   https://github.com/iJorgen/IPSet_ASUS_Lite
+# 
 #   Skynet Lite by Willem Bartels
 #   IP Blocking For ASUS Routers Using IPSet
 #   https://github.com/wbartels/IPSet_ASUS_Lite
@@ -16,7 +20,7 @@
 #
 #
 # Installation:
-# curl https://raw.githubusercontent.com/wbartels/IPSet_ASUS_Lite/master/firewall.sh --output /jffs/scripts/firewall && chmod 755 /jffs/scripts/firewall && /jffs/scripts/firewall
+# curl https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/firewall.sh --output /jffs/scripts/firewall && chmod 755 /jffs/scripts/firewall && /jffs/scripts/firewall
 #
 # Commands:
 # firewall help
@@ -45,10 +49,15 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="		<binarydefense>			https://www.binarydefense.com/banlist.txt  {4}
+blocklist_set="		<alienvault>			https://iplists.firehol.org/files/alienvault_reputation.ipset  {4}
+					<binarydefense>			https://www.binarydefense.com/banlist.txt  {4}
 					<blocklist.de>			https://iplists.firehol.org/files/blocklist_de.ipset  {4}
 					<ciarmy>				https://iplists.firehol.org/files/ciarmy.ipset  {4}
-					<dshield>				https://iplists.firehol.org/files/dshield_7d.netset  {4}
+					<ciscotalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
+					<cruzitwebattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {4}
+					<dshield>				https://iplists.firehol.org/files/dshield.netset  {4}
+					<dshieldtop1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {4}
+					<emergingthreats>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
 					<fireholwebclient>		https://iplists.firehol.org/files/firehol_webclient.netset  {4}
 					<greensnow>				https://iplists.firehol.org/files/greensnow.ipset  {4}
 					<myip>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {4}
@@ -344,6 +353,7 @@ header() {
 	if [ "$option" = "cru" ]; then return; fi
 	printf '\033[?7l' # disable line wrap
 	clear; sed -n '2,7s/#//p' "$0"
+	echo " Skynet Lite (FortKnox edition) by iJorgen"
 	echo " Skynet Lite $version by Willem Bartels"
 	echo " Code is based on Skynet By Adamm"
 	echo
@@ -651,7 +661,7 @@ throttle=0
 updatecount=0
 iotblocked="disabled"
 version="3.6.13"
-useragent="$(curl -V | grep -Eo '^curl.+)') Skynet-Lite/$version https://github.com/wbartels/IPSet_ASUS_Lite"
+useragent="$(curl -V | grep -Eo '^curl.+)') Skynet-Lite/$version https://github.com/iJorgen/IPSet_ASUS_Lite"
 lockfile="/var/lock/skynet.lock"
 
 dir_skynet="/tmp/skynet"
