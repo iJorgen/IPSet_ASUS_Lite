@@ -53,7 +53,7 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4}
 					<Blocklist.de>			https://iplists.firehol.org/files/blocklist_de.ipset  {1}
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
-					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
+					<CiscoTalos>			http://www.talosintelligence.com/documents/ip-blacklist  {4}
 					<CruzitWebattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {1}
 					<Dshield>				https://iplists.firehol.org/files/dshield.netset  {1}
 					<DshieldTop1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {1}
