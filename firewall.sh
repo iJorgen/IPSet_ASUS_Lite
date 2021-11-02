@@ -55,15 +55,16 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
 					<CiscoTalos>			http://www.talosintelligence.com/documents/ip-blacklist  {4}
 					<CruzitWebattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {1}
-					<Dshield>				https://iplists.firehol.org/files/dshield.netset  {1}
-					<DshieldTop1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {1}
+					<DanME_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
+					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
+					<Dshield_Top1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {1}
 					<EmergingThreats>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
-					<FireholWebclient>		https://iplists.firehol.org/files/firehol_webclient.netset  {1}
+					<FireholWebClient>		https://iplists.firehol.org/files/firehol_webclient.netset  {1}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
 					<MyIP>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {4}
 					<Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {12}
 					<Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {12}
-					<TOR_exits>				https://iplists.firehol.org/files/tor_exits.ipset  {1}"
+					<Xroxy_7d>				https://iplists.firehol.org/files/xroxy_7d.ipset  {2}"
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
