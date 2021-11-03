@@ -51,6 +51,7 @@ loginvalid="enabled"	# enabled | disabled
 
 blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_reputation.ipset  {4}
 					<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4}
+					<Bitcoin_nodes>			https://iplists.firehol.org/files/bitcoin_nodes.ipset  {1}
 					<Blocklist.de>			https://iplists.firehol.org/files/blocklist_de.ipset  {1}
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
 					<CiscoTalos>			http://www.talosintelligence.com/documents/ip-blacklist  {4}
@@ -59,7 +60,6 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {4}
 					<Dshield_Top1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {1}
 					<EmergingThreats>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
-					<Firehol_Abusers>		https://iplists.firehol.org/files/firehol_abusers_1d.netset  {2}
 					<Firehol_WebClient>		https://iplists.firehol.org/files/firehol_webclient.netset  {1}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
 					<MyIP>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {4}
