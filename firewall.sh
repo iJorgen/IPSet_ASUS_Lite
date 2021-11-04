@@ -70,7 +70,7 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
-passlist_ip=""
+passlist_ip="5.103.137.146"
 passlist_domain="	dns.adguard.com
 					dns.cloudflare.com
 					dns.google
@@ -784,7 +784,7 @@ case "$command" in
 		load_Domain
 		load_ASN
 		download_Set
-		cru a Skynet_update "$((minutes + 0)),$((minutes + 15)),$((minutes + 30)),$((minutes + 45)) * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "12,27,42,57 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
