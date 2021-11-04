@@ -63,6 +63,7 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<Firehol_WebClient>		https://iplists.firehol.org/files/firehol_webclient.netset  {1}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
 					<MyIP>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {4}
+					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {4}
 					<Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {12}
 					<Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {12}
 					<Xroxy_7d>				https://iplists.firehol.org/files/xroxy_7d.ipset  {4}"
@@ -409,9 +410,8 @@ load_Passlist() {
 		add Skynet-Temp 224.0.0.0/3 comment \"Passlist: Multicast/reserved/limited broadcast\""
 	local passlist_domain="$passlist_domain
 		$(echo "$blocklist_set $(nvram get firmware_server) $(nvram get ntp_server0) $(nvram get ntp_server1)" | strip_Domain)
-		fastly.com
 		github.com
-		ibm.com
+		ntp.se
 		ipinfo.io
 		raw.githubusercontent.com
 		www.internic.net"
@@ -696,8 +696,8 @@ done
 
 if [ "$command" = "update" ] || [ "$command" = "reset" ]; then
 	for i in 1 2 3 4 5 6; do
-		if ping -q -w1 -c1 ibm.com >/dev/null 2>&1; then break; fi
-		if ping -q -w1 -c1 fastly.com >/dev/null 2>&1; then break; fi
+		if ping -q -w1 -c1 dns.nextdns.io >/dev/null 2>&1; then break; fi
+		if ping -q -w1 -c1 ntp.se >/dev/null 2>&1; then break; fi
 		if ping -q -w1 -c1 github.com >/dev/null 2>&1; then break; fi
 		if [ $i -eq 1 ]; then log_Skynet "[!] Waiting for internet connectivity..."; fi
 		if [ $i -eq 6 ]; then log_Skynet "[*] Internet connectivity error"; echo; exit 1; fi
