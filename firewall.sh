@@ -50,20 +50,20 @@ logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
 blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_reputation.ipset  {1}
-					<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {1}
+					<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {2}
 					<Bitcoin_nodes>			https://iplists.firehol.org/files/bitcoin_nodes.ipset  {1}
 					<Blocklist.de>			https://iplists.firehol.org/files/blocklist_de.ipset  {1}
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
-					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {1}
+					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {2}
 					<Cruzit_Webattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {1}
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
 					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
 					<Dshield_Top1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {1}
-					<EmergingThreats>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {1}
+					<EmergingThreats>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {2}
 					<Firehol_WebClient>		https://iplists.firehol.org/files/firehol_webclient.netset  {1}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
-					<MyIP>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {1}
-					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {12}
+					<MyIP>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {2}
+					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {16}
 					<Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {6}
 					<Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {6}
 					<Xroxy_7d>				https://iplists.firehol.org/files/xroxy_7d.ipset  {1}"
@@ -71,7 +71,7 @@ blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
 passlist_ip="		5.103.137.146
-					116.202.112.72"
+					116.202.112.72" #Telldus, RainViewer
 passlist_domain="	dns.adguard.com
 					dns.cloudflare.com
 					dns.google
