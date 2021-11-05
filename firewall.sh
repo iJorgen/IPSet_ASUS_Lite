@@ -49,24 +49,24 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
-blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_reputation.ipset  {1}
-					<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {2}
-					<Bitcoin_nodes>			https://iplists.firehol.org/files/bitcoin_nodes.ipset  {1}
+blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_reputation.ipset  {2}
+					<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4}
+					<Bitcoin_nodes>			https://iplists.firehol.org/files/bitcoin_nodes.ipset  {2}
 					<Blocklist.de>			https://iplists.firehol.org/files/blocklist_de.ipset  {1}
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
-					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {2}
-					<Cruzit_Webattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {1}
+					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
+					<Cruzit_Webattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {2}
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
 					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
-					<Dshield_Top1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {1}
-					<EmergingThreats>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {2}
-					<Firehol_WebClient>		https://iplists.firehol.org/files/firehol_webclient.netset  {1}
+					<Dshield_Top1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {2}
+					<EmergingThreats>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
+					<Firehol_WebClient>		https://iplists.firehol.org/files/firehol_webclient.netset  {2}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
-					<MyIP>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {2}
+					<MyIP>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {4}
 					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {16}
-					<Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {6}
-					<Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {6}
-					<Xroxy_7d>				https://iplists.firehol.org/files/xroxy_7d.ipset  {1}"
+					<Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {12}
+					<Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {12}
+					<Xroxy_7d>				https://iplists.firehol.org/files/xroxy_7d.ipset  {2}"
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
@@ -785,7 +785,7 @@ case "$command" in
 		load_Domain
 		load_ASN
 		download_Set
-		cru a Skynet_update "27,57 * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "12,27,42,57 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
