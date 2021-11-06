@@ -63,11 +63,11 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<Firehol_WebClient>		https://iplists.firehol.org/files/firehol_webclient.netset  {2}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
 					<MyIP>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {4}
-					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}
 					<Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {24}
 					<Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {24}
 					<VxVault>				https://iplists.firehol.org/files/vxvault.ipset  {4}
-					<Xroxy_30d>				https://iplists.firehol.org/files/xroxy_30d.ipset  {4}"
+					<Xroxy_30d>				https://iplists.firehol.org/files/xroxy_30d.ipset  {4}
+					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}"
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
