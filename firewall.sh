@@ -65,7 +65,6 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<MyIP>					https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt  {4}
 					<Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {24}
 					<Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {24}
-					<VxVault>				https://iplists.firehol.org/files/vxvault.ipset  {4}
 					<Xroxy_30d>				https://iplists.firehol.org/files/xroxy_30d.ipset  {4}"
 blocklist_ip=""
 blocklist_domain=""
