@@ -54,7 +54,7 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<Bitcoin_nodes>			https://iplists.firehol.org/files/bitcoin_nodes.ipset  {2}
 					<Blocklist.de>			https://iplists.firehol.org/files/blocklist_de.ipset  {1}
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
-					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
+					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {2}
 					<Cruzit_Webattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {2}
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
 					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
