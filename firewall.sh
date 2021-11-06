@@ -66,13 +66,11 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {24}
 					<Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {24}
 					<VxVault>				https://iplists.firehol.org/files/vxvault.ipset  {4}
-					<Xroxy_30d>				https://iplists.firehol.org/files/xroxy_30d.ipset  {4}
-					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}"
+					<Xroxy_30d>				https://iplists.firehol.org/files/xroxy_30d.ipset  {4}"
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
-passlist_ip="		5.103.137.146
-					116.202.112.72" #Telldus, RainViewer
+passlist_ip=""
 passlist_domain="	dns.adguard.com
 					dns.cloudflare.com
 					dns.google
