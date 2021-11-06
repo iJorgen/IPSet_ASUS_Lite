@@ -66,7 +66,8 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}
 					<Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {24}
 					<Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {24}
-					<Xroxy_7d>				https://iplists.firehol.org/files/xroxy_7d.ipset  {2}"
+					<VxVault>				https://iplists.firehol.org/files/vxvault.ipset  {4}
+					<Xroxy_30d>				https://iplists.firehol.org/files/xroxy_30d.ipset  {4}"
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
