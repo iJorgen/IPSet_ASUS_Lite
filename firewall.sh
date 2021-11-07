@@ -70,7 +70,7 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
-passlist_ip=""
+passlist_ip="116.202.112.72" #RainViewer app
 passlist_domain="	dns.adguard.com
 					dns.cloudflare.com
 					dns.google
