@@ -74,13 +74,9 @@ passlist_ip="		116.202.112.72
 					192.36.27.86
 					188.172.192.71
 					45.90.28.0
-					45.90.30.0" #RainViewer app, 4 x NextDNS servers
-passlist_domain="	dns.adguard.com
-					dns.cloudflare.com
-					dns.google
+					45.90.30.0" #RainViewer, 4 x NextDNS servers
+passlist_domain="	dns.cloudflare.com
 					dns.nextdns.io
-					dns.opendns.com
-					dns.quad9.net
 					one.one.one.one"
 
 
