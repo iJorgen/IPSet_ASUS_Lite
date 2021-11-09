@@ -51,20 +51,23 @@ loginvalid="enabled"	# enabled | disabled
 
 blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_reputation.ipset  {2}
 					<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {4}
-					<Bitcoin_nodes>			https://iplists.firehol.org/files/bitcoin_nodes.ipset  {2}
+					<Bitcoin_nodes>			https://iplists.firehol.org/files/bitcoin_nodes.ipset  {1}
 					<Blocklist.de>			https://iplists.firehol.org/files/blocklist_de.ipset  {1}
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
 					<Cruzit_Webattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {2}
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
+					<Darklist>				https://iplists.firehol.org/files/darklist_de.netset  {4}
 					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
 					<Dshield_Top1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {2}
 					<EmergingThreats>		https://iplists.firehol.org/files/et_compromised.ipset  {4}
 					<Firehol_WebClient>		https://iplists.firehol.org/files/firehol_webclient.netset  {2}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
 					<MyIP>					https://iplists.firehol.org/files/myip.ipset  {2}
+					<Socks_Proxies_7d>		https://iplists.firehol.org/files/socks_proxy_7d.ipset  {1}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {24}
 					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {24}
+					<SSL_Proxies_7d>		https://iplists.firehol.org/files/sslproxies_7d.ipset  {1}
 					<Xroxy_30d>				https://iplists.firehol.org/files/xroxy_30d.ipset  {4}
 					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}"
 blocklist_ip=""
