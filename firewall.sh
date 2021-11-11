@@ -61,7 +61,6 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
 					<Dshield_Top1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {2}
 					<EmergingThreats>		https://iplists.firehol.org/files/et_compromised.ipset  {4}
-					<Firehol_Abusers>		https://iplists.firehol.org/files/firehol_abusers_1d.netset  {2}
 					<Firehol_WebClient>		https://iplists.firehol.org/files/firehol_webclient.netset  {2}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
 					<MyIP>					https://iplists.firehol.org/files/myip.ipset  {2}
