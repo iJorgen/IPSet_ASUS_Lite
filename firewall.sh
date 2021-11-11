@@ -69,16 +69,14 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {24}
 					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {24}
 					<SSL_Proxies_7d>		https://iplists.firehol.org/files/sslproxies_7d.ipset  {1}
-					<Xroxy_30d>				https://iplists.firehol.org/files/xroxy_30d.ipset  {4}
-					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}"
+					<Xroxy_30d>				https://iplists.firehol.org/files/xroxy_30d.ipset  {4}"
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
-passlist_ip="		116.202.112.72
-					192.36.27.86
+passlist_ip="		192.36.27.86
 					188.172.192.71
 					45.90.28.0
-					45.90.30.0" #RainViewer, 4 x NextDNS servers
+					45.90.30.0" #4 x NextDNS servers
 passlist_domain="	dns.cloudflare.com
 					dns.nextdns.io
 					one.one.one.one"
