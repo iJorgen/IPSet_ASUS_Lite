@@ -62,21 +62,24 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<Dshield_Top1000>		https://iplists.firehol.org/files/dshield_top_1000.ipset  {2}
 					<EmergingThreats>		https://iplists.firehol.org/files/et_compromised.ipset  {4}
 					<Firehol_WebClient>		https://iplists.firehol.org/files/firehol_webclient.netset  {2}
-					<FullBogons>			https://iplists.firehol.org/files/iblocklist_cidr_report_bogons.netset  {12}
+					<FullBogons>			https://iplists.firehol.org/files/iblocklist_cidr_report_bogons.netset  {4}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
 					<MyIP>					https://iplists.firehol.org/files/myip.ipset  {2}
 					<Socks_Proxies_7d>		https://iplists.firehol.org/files/socks_proxy_7d.ipset  {1}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {12}
 					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {12}
 					<SSL_Proxies_7d>		https://iplists.firehol.org/files/sslproxies_7d.ipset  {1}
-					<Xroxy_30d>				https://iplists.firehol.org/files/xroxy_30d.ipset  {4}"
+					<Xroxy_30d>				https://iplists.firehol.org/files/xroxy_30d.ipset  {4}
+					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}"
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
 passlist_ip="		192.36.27.86
 					188.172.192.71
 					45.90.28.0
-					45.90.30.0" #NextDNS servers
+					45.90.30.0
+					116.202.112.72
+ 					5.103.137.146" #NextDNS servers (4), RainViewer, Telldus
 passlist_domain="	dns.cloudflare.com
 					dns.nextdns.io
 					one.one.one.one"
