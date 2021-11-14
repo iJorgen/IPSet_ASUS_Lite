@@ -5,7 +5,7 @@
 # |___/_\_\\_, |_||_\___|\__| |____|_|\__\___|  ForkKnox Edition
 #          |__/
 #
-#   Skynet Lite (ForkKnox edition) by iJorgen
+#   Skynet Lite (ForkKnox Edition) by iJorgen
 #   IP Blocking For ASUS Routers Using IPSet (with additional blocklists)
 #   https://github.com/iJorgen/IPSet_ASUS_Lite
 # 
