@@ -1,4 +1,4 @@
-# Skynet Lite - Firewall & Security Enhancements
+# Skynet Lite (ForkKnox Edition) - Firewall & Security Enhancements
 
 Lightweight firewall addition for ARM/HND based ASUS Routers using IPSet.
 Skynet Lite relies on the IPTables from Skynet by Adamm.
