@@ -2,10 +2,10 @@
 #  ___ _                 _     _    _ _
 # / __| |___  _ _ _  ___| |_  | |  (_) |_ ___
 # \__ \ / / || | ' \/ -_)  _| | |__| |  _/ -_)
-# |___/_\_\\_, |_||_\___|\__| |____|_|\__\___|  FORTKNOX EDITION
+# |___/_\_\\_, |_||_\___|\__| |____|_|\__\___|  ForkKnox Edition
 #          |__/
 #
-#   Skynet Lite (FortKnox edition) by iJorgen
+#   Skynet Lite (ForkKnox edition) by iJorgen
 #   IP Blocking For ASUS Routers Using IPSet (with additional blocklists)
 #   https://github.com/iJorgen/IPSet_ASUS_Lite
 # 
@@ -68,7 +68,7 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
 					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
 					<SSL_Proxies_7d>		https://iplists.firehol.org/files/sslproxies_7d.ipset  {1}
-					<Xroxy_30d>				https://iplists.firehol.org/files/xroxy_30d.ipset  {4}
+					<Xroxy_7d>				https://iplists.firehol.org/files/xroxy_7d.ipset  {4}
 					<Xtra_RiskyCountries>	https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}"
 blocklist_ip=""
 blocklist_domain=""
@@ -361,7 +361,7 @@ header() {
 	if [ "$option" = "cru" ]; then return; fi
 	printf '\033[?7l' # disable line wrap
 	clear; sed -n '2,7s/#//p' "$0"
-	echo " Skynet Lite (FortKnox edition) by iJorgen"
+	echo " Skynet Lite (ForkKnox edition) by iJorgen"
 	echo " Skynet Lite $version by Willem Bartels"
 	echo " Code is based on Skynet By Adamm"
 	echo
