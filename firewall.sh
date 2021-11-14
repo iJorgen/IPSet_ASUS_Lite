@@ -361,7 +361,7 @@ header() {
 	if [ "$option" = "cru" ]; then return; fi
 	printf '\033[?7l' # disable line wrap
 	clear; sed -n '2,7s/#//p' "$0"
-	echo " Skynet Lite (ForkKnox edition) by iJorgen"
+	echo " Skynet Lite (ForkKnox Edition) by iJorgen"
 	echo " Skynet Lite $version by Willem Bartels"
 	echo " Code is based on Skynet By Adamm"
 	echo
