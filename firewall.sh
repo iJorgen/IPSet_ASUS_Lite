@@ -789,7 +789,7 @@ case "$command" in
 		load_Domain
 		load_ASN
 		download_Set
-		cru a Skynet_update "12,27,42,57 * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "11,26,41,56 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
