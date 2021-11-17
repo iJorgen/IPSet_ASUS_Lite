@@ -77,9 +77,11 @@ passlist_ip="		192.36.27.86
 					188.172.192.71
 					45.90.28.0
 					45.90.30.0
+					81.3.6.164
+					81.3.6.166
 					116.202.112.72
 					5.103.137.146
-					111.230.189.174" #NextDNS servers (4), RainViewer (1), Telldus (2)
+					111.230.189.174" #NextDNS (4), Tutanota(2), RainViewer (1), Telldus (2)
 passlist_domain="	dns.cloudflare.com
 					dns.nextdns.io
 					one.one.one.one"
