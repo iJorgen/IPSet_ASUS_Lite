@@ -63,11 +63,8 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<FullBogons>			https://iplists.firehol.org/files/iblocklist_cidr_report_bogons.netset  {4}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
 					<MyIP>					https://iplists.firehol.org/files/myip.ipset  {2}
-					<Socks_Proxies_7d>		https://iplists.firehol.org/files/socks_proxy_7d.ipset  {1}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
-					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
-					<SSL_Proxies_7d>		https://iplists.firehol.org/files/sslproxies_7d.ipset  {1}
-					<Xroxy_7d>				https://iplists.firehol.org/files/xroxy_7d.ipset  {4}"
+					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}"
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
