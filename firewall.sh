@@ -49,8 +49,7 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
-blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_reputation.ipset  {2}
-					<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {4}
+blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {4}
 					<Bitcoin_nodes>			https://iplists.firehol.org/files/bitcoin_nodes.ipset  {1}
 					<Blocklist.de>			https://iplists.firehol.org/files/blocklist_de.ipset  {1}
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
@@ -68,8 +67,7 @@ blocklist_set="		<AlienVault>			https://iplists.firehol.org/files/alienvault_rep
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
 					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
 					<SSL_Proxies_7d>		https://iplists.firehol.org/files/sslproxies_7d.ipset  {1}
-					<Xroxy_7d>				https://iplists.firehol.org/files/xroxy_7d.ipset  {4}
-					<Xtra_RiskyCountries>	https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}"
+					<Xroxy_7d>				https://iplists.firehol.org/files/xroxy_7d.ipset  {4}"
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
@@ -78,13 +76,12 @@ passlist_ip="		192.36.27.86
 					45.90.28.0
 					45.90.30.0
 					81.3.6.164
-					81.3.6.166
-					116.202.112.72
-					5.103.137.146
-					111.230.189.174" #NextDNS (4), Tutanota(2), RainViewer (1), Telldus (2)
+					81.3.6.166" #NextDNS (4), Tutanota(2)
 passlist_domain="	dns.cloudflare.com
 					dns.nextdns.io
-					one.one.one.one"
+					one.one.one.one
+					ntp.se
+					time.cloudflare.com"
 
 
 ###############
