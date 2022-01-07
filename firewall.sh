@@ -55,6 +55,7 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
 					<Cruzit_Webattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {2}
+					<Cybercrime>			https://iplists.firehol.org/files/cybercrime.ipset  {4}
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
 					<Darklist>				https://iplists.firehol.org/files/darklist_de.netset  {4}
 					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
@@ -73,7 +74,9 @@ passlist_ip="		192.36.27.86
 					45.90.28.0
 					45.90.30.0
 					81.3.6.164
-					81.3.6.166" #NextDNS (4), Tutanota(2)
+					81.3.6.166
+					5.103.137.146
+					212.237.100.250" #NextDNS (4), Tutanota(2), NTP-servers (2)
 passlist_domain="	dns.cloudflare.com
 					dns.nextdns.io
 					one.one.one.one
