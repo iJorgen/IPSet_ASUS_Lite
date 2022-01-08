@@ -77,11 +77,9 @@ passlist_ip="		192.36.27.86
 					81.3.6.166
 					5.103.137.146
 					212.237.100.250" #NextDNS (4), Tutanota(2), NTP-servers (2)
-passlist_domain="	dns.cloudflare.com
-					dns.nextdns.io
+passlist_domain="	dns.nextdns.io
 					one.one.one.one
-					ntp.se
-					time.cloudflare.com"
+					dns.google"
 
 
 ###############
@@ -415,8 +413,6 @@ load_Passlist() {
 	local passlist_domain="$passlist_domain
 		$(echo "$blocklist_set $(nvram get firmware_server) $(nvram get ntp_server0) $(nvram get ntp_server1)" | strip_Domain)
 		github.com
-		cloudflare.net
-		ntp.se
 		ipinfo.io
 		raw.githubusercontent.com
 		www.internic.net"
@@ -671,7 +667,7 @@ version="3.6.13"
 useragent="$(curl -V | grep -Eo '^curl.+)') Skynet-Lite/$version https://github.com/iJorgen/IPSet_ASUS_Lite"
 lockfile="/var/lock/skynet.lock"
 
-dir_skynet="/tmp/skynet"
+dir_skynet="/tmp/skynetfk"
 dir_cache="$dir_skynet/cache_"
 dir_debug="$dir_skynet/debug_"
 dir_filtered="$dir_skynet/filtered_"
@@ -701,8 +697,8 @@ done
 
 if [ "$command" = "update" ] || [ "$command" = "reset" ]; then
 	for i in 1 2 3 4 5 6; do
-		if ping -q -w1 -c1 ntp.se >/dev/null 2>&1; then break; fi
-		if ping -q -w1 -c1 cloudflare.net >/dev/null 2>&1; then break; fi
+		if ping -q -w1 -c1 one.one.one.one >/dev/null 2>&1; then break; fi
+		if ping -q -w1 -c1 dns.google >/dev/null 2>&1; then break; fi
 		if ping -q -w1 -c1 github.com >/dev/null 2>&1; then break; fi
 		if [ $i -eq 1 ]; then log_Skynet "[!] Waiting for internet connectivity..."; fi
 		if [ $i -eq 6 ]; then log_Skynet "[*] Internet connectivity error"; echo; exit 1; fi
