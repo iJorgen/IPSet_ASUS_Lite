@@ -159,7 +159,7 @@ strip_Domain() {
 
 
 filter_Domain() {
-	awk '{gsub("<.+>", ""); print}' | grep -Eo '(([a-z](-?[a-z0-9])*)\.)+[a-z]{2,}'
+	awk '{gsub("<.+>", ""); print}' | grep -Eo '(([a-z][a-z0-9-]*)\.)+[a-z]{2,}'
 }
 
 
@@ -437,7 +437,7 @@ load_Passlist() {
 	cache="$dir_cache/named.root"
 
 	http_code=$(curl -sf --location --user-agent "$useragent" \
-		--connect-timeout 10 --max-time 90 --limit-rate "$throttle" \
+		--connect-timeout 5 --max-time 90 --limit-rate "$throttle" \
 		--write-out "%{http_code}" --output "$temp" \
 		--remote-time --time-cond "$cache" \
 		--header "Accept-encoding: gzip" "$url"); curl_exit=$?
@@ -497,7 +497,7 @@ load_ASN() {
 			temp="$dir_temp/$asn"
 
 			http_code=$(curl -sf --location --user-agent "$useragent" \
-				--connect-timeout 10 --max-time 90 --limit-rate "$throttle" \
+				--connect-timeout 5 --max-time 90 --limit-rate "$throttle" \
 				--write-out "%{http_code}" --output "$temp" \
 				--header "Accept-encoding: gzip" "$url"); curl_exit=$?
 
@@ -592,7 +592,7 @@ download_Set() {
 		filtered_cache="$dir_filtered/$setname"
 
 		http_code=$(curl -sf --location --user-agent "$useragent" \
-			--connect-timeout 10 --max-time 90 --limit-rate "$throttle" \
+			--connect-timeout 10 --max-time 5 --limit-rate "$throttle" \
 			--write-out "%{http_code}" --output "$temp" \
 			--remote-time --time-cond "$cache" \
 			--header "Accept-encoding: gzip" "$url"); curl_exit=$?
@@ -662,7 +662,7 @@ option="$2"
 throttle=0
 updatecount=0
 iotblocked="disabled"
-version="3.6.13"
+version="3.6.14"
 useragent="$(curl -V | grep -Eo '^curl.+)') Skynet-Lite/$version https://github.com/iJorgen/IPSet_ASUS_Lite"
 lockfile="/var/lock/skynet.lock"
 
