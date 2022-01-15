@@ -592,7 +592,7 @@ download_Set() {
 		filtered_cache="$dir_filtered/$setname"
 
 		http_code=$(curl -sf --location --user-agent "$useragent" \
-			--connect-timeout 10 --max-time 5 --limit-rate "$throttle" \
+			--connect-timeout 5 --max-time 90 --limit-rate "$throttle" \
 			--write-out "%{http_code}" --output "$temp" \
 			--remote-time --time-cond "$cache" \
 			--header "Accept-encoding: gzip" "$url"); curl_exit=$?
