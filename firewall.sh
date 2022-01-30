@@ -79,7 +79,8 @@ passlist_ip="		192.36.27.86
 					212.237.100.250" #NextDNS (4), Tutanota(2), NTP-servers (2)
 passlist_domain="	dns.nextdns.io
 					one.one.one.one
-					dns.google"
+					dns.google
+					dns.msftncsi.com"
 
 
 ###############
@@ -784,7 +785,7 @@ case "$command" in
 		load_Domain
 		load_ASN
 		download_Set
-		cru a Skynet_update "11,26,41,56 * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "9,24,39,54 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
