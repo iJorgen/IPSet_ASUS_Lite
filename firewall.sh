@@ -74,10 +74,7 @@ passlist_ip="		192.36.27.86
 					45.90.28.0
 					45.90.30.0
 					81.3.6.164
-					81.3.6.166
-					5.103.137.146
-					212.237.100.250
-					104.23.98.190" #NextDNS (4), Tutanota(2), NTP-servers (2)
+					81.3.6.166" #NextDNS (4), Tutanota(2)
 passlist_domain="	dns.nextdns.io
 					one.one.one.one
 					dns.google
