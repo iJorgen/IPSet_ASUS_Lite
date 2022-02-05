@@ -63,9 +63,9 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<FullBogons>			https://iplists.firehol.org/files/iblocklist_cidr_report_bogons.netset  {4}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
 					<MyIP>					https://iplists.firehol.org/files/myip.ipset  {2}
+					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
-					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
-					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}"
+					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}"
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
@@ -74,7 +74,9 @@ passlist_ip="		192.36.27.86
 					45.90.28.0
 					45.90.30.0
 					81.3.6.164
-					81.3.6.166" #NextDNS (4), Tutanota(2)
+					81.3.6.166
+					104.23.98.190
+					104.23.99.190" #NextDNS (4), Tutanota(2), Pastebin (2)
 passlist_domain="	dns.nextdns.io
 					one.one.one.one
 					dns.google
