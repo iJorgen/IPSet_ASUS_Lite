@@ -64,8 +64,11 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
 					<MyIP>					https://iplists.firehol.org/files/myip.ipset  {2}
 					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}
+					<SocksProxy_1d>			https://iplists.firehol.org/files/socks_proxy_1d.ipset  {1}
+					<SSLProxy_1d>			https://iplists.firehol.org/files/sslproxies_1d.ipset  {1}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
-					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}"
+					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
+					<Xroxy_1d>				https://iplists.firehol.org/files/xroxy_1d.ipset  {4}"
 blocklist_ip=""
 blocklist_domain=""
 blocklist_asn=""
