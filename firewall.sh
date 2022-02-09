@@ -417,9 +417,7 @@ load_Passlist() {
 		add Skynet-Temp 224.0.0.0/3 comment \"Passlist: Multicast/reserved/limited broadcast\""
 	local passlist_domain="$passlist_domain
 		$(echo "$blocklist_set $(nvram get firmware_server) $(nvram get ntp_server0) $(nvram get ntp_server1)" | strip_Domain)
-		fastly.com
 		github.com
-		ibm.com
 		raw.githubusercontent.com
 		www.internic.net"
 
@@ -678,8 +676,8 @@ done
 
 if [ "$command" = "update" ] || [ "$command" = "reset" ]; then
 	for i in 1 2 3 4 5 6; do
-		if ping -q -w1 -c1 ibm.com >/dev/null 2>&1; then break; fi
-		if ping -q -w1 -c1 fastly.com >/dev/null 2>&1; then break; fi
+		if ping -q -w1 -c1 one.one.one.one >/dev/null 2>&1; then break; fi
+		if ping -q -w1 -c1 ntp.se >/dev/null 2>&1; then break; fi
 		if ping -q -w1 -c1 github.com >/dev/null 2>&1; then break; fi
 		if [ $i -eq 1 ]; then log_Skynet "[!] Waiting for internet connectivity..."; fi
 		if [ $i -eq 6 ]; then log_Skynet "[*] Internet connectivity error"; echo; exit 1; fi
