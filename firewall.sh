@@ -8,19 +8,19 @@
 #   Skynet Lite (ForkKnox Edition) by iJorgen
 #   IP Blocking For ASUS Routers Using IPSet (with additional blocklists)
 #   https://github.com/iJorgen/IPSet_ASUS_Lite
-# 
+#
 #   Skynet Lite by Willem Bartels
-#   IP Blocking For ASUS Routers Using IPSet
+#   IP Blocking for ASUS Routers Using IPSet
 #   https://github.com/wbartels/IPSet_ASUS_Lite
 #
-#   Code is based on Skynet By Adamm
-#   Advanced IP Blocking For ASUS Routers Using IPSet
+#   Code is based on Skynet by Adamm
+#   Advanced IP Blocking for ASUS Routers using IPSet
 #   https://github.com/Adamm00/IPSet_ASUS
 #   This script will always be open source and free to use
 #
 #
 # Installation:
-# curl https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/firewall.sh --output /jffs/scripts/firewall && chmod 755 /jffs/scripts/firewall && /jffs/scripts/firewall
+# curl https://raw.githubusercontent.com/wbartels/IPSet_ASUS_Lite/master/firewall.sh --output /jffs/scripts/firewall && chmod 755 /jffs/scripts/firewall && /jffs/scripts/firewall
 #
 # Commands:
 # firewall help
@@ -28,17 +28,28 @@
 # Readme:
 # The cron job is started every 15 minutes.
 # By default, the set update process is started after 4 cycles = 1 hour.
-# This value can be overridden per set with the tag {n}.
+# This value can be overridden per set with the {n} tag.
+# If supported only changed files will be downloaded, see URL's below for more info.
+# This way the update frequencies can be relative high without overloading the servers.
+#
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Modified-Since
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304
+#
 # If a download fails, this set will be retried at an interval of 15 minutes.
 # Over time, the interval will be extended to a maximum of 6 hours.
 #
 # Both the <comment> and {n} tags are optional.
-# The order of the url and tags are not important, but must be on the same line.
+# The order of the URL and tags are not important, but must be on the same line.
 #
-# The other lists (ip, domain and asn) can contain multiple items per list.
+# The other lists (ip and domain) can contain multiple items per list.
 # The items on these lists must be separated with a space, tab or newline.
-# blocklist_ip, blocklist_domain, blocklist_asn and passlist_ip can optionally use one <comment> tag per list.
+# blocklist_ip, blocklist_domain and passlist_ip can optionally use one <comment> tag per list.
 #
+# feb 2022: Torproject tor-exits aren't updated for months.
+# Thanks https://github.com/SecOps-Institute for creating a tor-exit-nodes list.
+#
+
 
 ###################
 #- Configuration -#
@@ -47,7 +58,7 @@
 
 filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
-loginvalid="enabled"	# enabled | disabled
+loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {4}
 					<Bitcoin_nodes>			https://iplists.firehol.org/files/bitcoin_nodes.ipset  {1}
@@ -71,20 +82,15 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<Xroxy_1d>				https://iplists.firehol.org/files/xroxy_1d.ipset  {4}"
 blocklist_ip=""
 blocklist_domain=""
-passlist_ip="		192.36.27.86
-					188.172.192.71
-					45.90.28.0
-					45.90.30.0
-					81.3.6.164
-					81.3.6.166
-					104.23.98.190
-					104.23.99.190" #NextDNS (4), Tutanota(2), Pastebin (2)
-passlist_domain="	dns.nextdns.io
-					one.one.one.one
+
+passlist_ip=""
+passlist_domain="	dns.adguard.com
+					dns.cloudflare.com
 					dns.google
-					dns.msftncsi.com
-					time.cloudflare.com
-					ntp.se"
+					dns.nextdns.io
+					dns.opendns.com
+					dns.quad9.net
+					one.one.one.one"
 
 
 ###############
@@ -94,7 +100,7 @@ passlist_domain="	dns.nextdns.io
 
 unload_IPTables() {
 	iptables -t raw -D PREROUTING -i "$iface" -m set ! --match-set Skynet-Passlist src -m set --match-set Skynet-Primary src -j DROP 2>/dev/null
-	iptables -t raw -D PREROUTING -i br+ -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Primary dst -j DROP 2>/dev/null
+	iptables -t raw -D PREROUTING -i br0 -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Primary dst -j DROP 2>/dev/null
 	iptables -t raw -D OUTPUT -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Primary dst -j DROP 2>/dev/null
 	iptables -D logdrop -m state --state NEW -j LOG --log-prefix "DROP " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
 	ip6tables -D logdrop -m state --state NEW -j LOG --log-prefix "DROP " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
@@ -108,7 +114,7 @@ load_IPTables() {
 		iptables -t raw -I PREROUTING -i "$iface" -m set ! --match-set Skynet-Passlist src -m set --match-set Skynet-Primary src -j DROP 2>/dev/null
 	fi
 	if [ "$filtertraffic" = "all" ] || [ "$filtertraffic" = "outbound" ]; then
-		iptables -t raw -I PREROUTING -i br+ -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Primary dst -j DROP 2>/dev/null
+		iptables -t raw -I PREROUTING -i br0 -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Primary dst -j DROP 2>/dev/null
 		iptables -t raw -I OUTPUT -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Primary dst -j DROP 2>/dev/null
 	fi
 }
@@ -116,10 +122,10 @@ load_IPTables() {
 
 unload_LogIPTables() {
 	iptables -t raw -D PREROUTING -i "$iface" -m set ! --match-set Skynet-Passlist src -m set --match-set Skynet-Primary src -j LOG --log-prefix "[BLOCKED - INBOUND] " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
-	iptables -t raw -D PREROUTING -i br+ -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Primary dst -j LOG --log-prefix "[BLOCKED - OUTBOUND] " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
+	iptables -t raw -D PREROUTING -i br0 -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Primary dst -j LOG --log-prefix "[BLOCKED - OUTBOUND] " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
 	iptables -t raw -D OUTPUT -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Primary dst -j LOG --log-prefix "[BLOCKED - OUTBOUND] " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
 	iptables -D logdrop -m state --state NEW -j LOG --log-prefix "[BLOCKED - INVALID] " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
-	iptables -D FORWARD -i br+ -m set --match-set Skynet-IOT src ! -o tun2+ -j LOG --log-prefix "[BLOCKED - IOT] " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
+	iptables -D FORWARD -i br0 -m set --match-set Skynet-IOT src ! -o tun2+ -j LOG --log-prefix "[BLOCKED - IOT] " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
 }
 
 
@@ -132,7 +138,7 @@ load_LogIPTables() {
 		fi
 		if [ "$filtertraffic" = "all" ] || [ "$filtertraffic" = "outbound" ]; then
 			pos3="$(iptables --line -nL PREROUTING -t raw | grep -F "Skynet-Primary dst" | grep -F "DROP" | awk '{print $1}')"
-			iptables -t raw -I PREROUTING "$pos3" -i br+ -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Primary dst -j LOG --log-prefix "[BLOCKED - OUTBOUND] " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
+			iptables -t raw -I PREROUTING "$pos3" -i br0 -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Primary dst -j LOG --log-prefix "[BLOCKED - OUTBOUND] " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
 			pos4="$(iptables --line -nL OUTPUT -t raw | grep -F "Skynet-Primary dst" | grep -F "DROP" | awk '{print $1}')"
 			iptables -t raw -I OUTPUT "$pos4" -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Primary dst -j LOG --log-prefix "[BLOCKED - OUTBOUND] " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
 		fi
@@ -141,7 +147,7 @@ load_LogIPTables() {
 		fi
 		if [ "$iotblocked" = "enabled" ]; then
 			pos5="$(iptables --line -nL FORWARD | grep -F "Skynet-IOT" | grep -F "DROP" | awk '{print $1}')"
-			iptables -I FORWARD "$pos5" -i br+ -m set --match-set Skynet-IOT src ! -o tun2+ -j LOG --log-prefix "[BLOCKED - IOT] " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
+			iptables -I FORWARD "$pos5" -i br0 -m set --match-set Skynet-IOT src ! -o tun2+ -j LOG --log-prefix "[BLOCKED - IOT] " --log-tcp-sequence --log-tcp-options --log-ip-options 2>/dev/null
 		fi
 	fi
 }
@@ -411,8 +417,9 @@ load_Passlist() {
 		add Skynet-Temp 224.0.0.0/3 comment \"Passlist: Multicast/reserved/limited broadcast\""
 	local passlist_domain="$passlist_domain
 		$(echo "$blocklist_set $(nvram get firmware_server) $(nvram get ntp_server0) $(nvram get ntp_server1)" | strip_Domain)
+		fastly.com
 		github.com
-		ipinfo.io
+		ibm.com
 		raw.githubusercontent.com
 		www.internic.net"
 
@@ -559,9 +566,9 @@ download_Set() {
 		filtered_temp="$dir_temp/${setname}_filtered"
 		filtered_cache="$dir_filtered/$setname"
 
-		http_code=$(curl -sf --location --user-agent "$useragent" \
-			--connect-timeout 5 --max-time 90 --limit-rate "$throttle" \
-			--write-out "%{http_code}" --output "$temp" \
+		response_code=$(curl -sf --location \
+			--limit-rate "$throttle" --user-agent "$useragent" \
+			--connect-timeout 5 --retry 3 --retry-max-time 60 \
 			--remote-time --time-cond "$cache" \
 			--etag-compare "$etag" --etag-save "$etag_temp" \
 			--write-out "%{response_code}" --output "$temp" \
@@ -581,6 +588,7 @@ download_Set() {
 				load_Set
 				mv -f "$temp" "$cache"
 				mv -f "$filtered_temp" "$filtered_cache"
+				mv -f "$etag_temp" "$etag"
 			fi
 			rm -f "$dir_reload/$setname"
 		else
@@ -636,7 +644,7 @@ throttle=0
 updatecount=0
 iotblocked="disabled"
 version="3.7.1"
-useragent="$(curl -V | grep -Eo '^curl.+)') Skynet-Lite/$version https://github.com/iJorgen/IPSet_ASUS_Lite"
+useragent="$(curl -V | grep -Eo '^curl.+)') Skynet-Lite/$version https://github.com/wbartels/IPSet_ASUS_Lite"
 lockfile="/var/lock/skynet.lock"
 
 dir_skynet="/tmp/skynet"
@@ -670,8 +678,8 @@ done
 
 if [ "$command" = "update" ] || [ "$command" = "reset" ]; then
 	for i in 1 2 3 4 5 6; do
-		if ping -q -w1 -c1 one.one.one.one >/dev/null 2>&1; then break; fi
-		if ping -q -w1 -c1 dns.google >/dev/null 2>&1; then break; fi
+		if ping -q -w1 -c1 ibm.com >/dev/null 2>&1; then break; fi
+		if ping -q -w1 -c1 fastly.com >/dev/null 2>&1; then break; fi
 		if ping -q -w1 -c1 github.com >/dev/null 2>&1; then break; fi
 		if [ $i -eq 1 ]; then log_Skynet "[!] Waiting for internet connectivity..."; fi
 		if [ $i -eq 6 ]; then log_Skynet "[*] Internet connectivity error"; echo; exit 1; fi
@@ -719,7 +727,7 @@ case "$command" in
 	reset)
 		header "Reset"
 		log_Skynet "[i] Install"
-		cru d Skynet_update
+		cru d Skynet_update; minutes=$(($(date +%M) % 15))
 		rm -f "$dir_cache/"* "$dir_debug/"* "$dir_etag/"* "$dir_filtered/"*
 		rm -f "$dir_reload/"* "$dir_system/"* "$dir_temp/"* "$dir_update/"*
 		true > "$dir_skynet/warning.log"
@@ -753,7 +761,7 @@ case "$command" in
 		load_Blocklist
 		load_Domain
 		download_Set
-		cru a Skynet_update "9,24,39,54 * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "$((minutes + 0)),$((minutes + 15)),$((minutes + 30)),$((minutes + 45)) * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
@@ -916,3 +924,4 @@ esac
 rm -f "$dir_temp/"*
 log_Tail "$dir_skynet/warning.log"
 log_Tail "$dir_skynet/error.log"
+
