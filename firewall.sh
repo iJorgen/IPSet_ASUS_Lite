@@ -84,12 +84,9 @@ blocklist_ip=""
 blocklist_domain=""
 
 passlist_ip=""
-passlist_domain="	dns.adguard.com
-					dns.cloudflare.com
-					dns.google
-					dns.nextdns.io
-					dns.opendns.com
-					dns.quad9.net
+passlist_domain="	dns.nextdns.io
+					dns1.nextdns.io
+					dns2.nextdns.io
 					one.one.one.one"
 
 
