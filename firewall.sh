@@ -82,8 +82,14 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<Xroxy_1d>				https://iplists.firehol.org/files/xroxy_1d.ipset  {4}"
 blocklist_ip=""
 blocklist_domain=""
-
-passlist_ip=""
+passlist_ip="		192.36.27.86
+					188.172.192.71
+					45.90.28.0
+					45.90.30.0
+					81.3.6.164
+					81.3.6.166
+					104.23.98.190
+					104.23.99.190"
 passlist_domain="	dns.nextdns.io
 					dns1.nextdns.io
 					dns2.nextdns.io
