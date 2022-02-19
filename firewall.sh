@@ -89,12 +89,11 @@ passlist_ip="		192.36.27.86
 					81.3.6.164
 					81.3.6.166
 					104.23.98.190
-					104.23.99.190
-					91.236.251.234
-					188.68.53.92"
+					104.23.99.190"
 passlist_domain="	dns.nextdns.io
 					dns1.nextdns.io
 					dns2.nextdns.io
+					steering.nextdns.io
 					one.one.one.one
 					dns.msftncsi.com"
 
