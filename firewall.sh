@@ -89,11 +89,14 @@ passlist_ip="		192.36.27.86
 					81.3.6.164
 					81.3.6.166
 					104.23.98.190
-					104.23.99.190"
+					104.23.99.190
+					91.236.251.234
+					188.68.53.92"
 passlist_domain="	dns.nextdns.io
 					dns1.nextdns.io
 					dns2.nextdns.io
-					one.one.one.one"
+					one.one.one.one
+					dns.msftncsi.com"
 
 
 ###############
@@ -174,12 +177,12 @@ strip_Domain() {
 
 
 filter_Domain() {
-	awk '{gsub("<.+>", ""); print}' | grep -Eo '(([a-z][a-z0-9-]*)\.)+[a-z]{2,62}'
+	awk '{gsub("<.+>", ""); print}' | grep -Eo '([a-z0-9-]+\.)+(xn--[a-z0-9-]{4,}|[a-z]{2,})'
 }
 
 
 is_Domain() {
-	grep -Eo '^(([a-z][a-z0-9-]*)\.)+[a-z]{2,62}$'
+	grep -Eo '^([a-z0-9-]+\.)+(xn--[a-z0-9-]{4,}|[a-z]{2,})$'
 }
 
 
@@ -644,7 +647,7 @@ option="$2"
 throttle=0
 updatecount=0
 iotblocked="disabled"
-version="3.7.1"
+version="3.7.2"
 useragent="$(curl -V | grep -Eo '^curl.+)') Skynet-Lite/$version https://github.com/wbartels/IPSet_ASUS_Lite"
 lockfile="/var/lock/skynet.lock"
 
@@ -678,13 +681,13 @@ done
 
 
 if [ "$command" = "update" ] || [ "$command" = "reset" ]; then
-	for i in 1 2 3 4 5 6; do
+	for i in 1 2 3 4 5 6 7; do
 		if ping -q -w1 -c1 one.one.one.one >/dev/null 2>&1; then break; fi
 		if ping -q -w1 -c1 ntp.se >/dev/null 2>&1; then break; fi
 		if ping -q -w1 -c1 github.com >/dev/null 2>&1; then break; fi
 		if [ $i -eq 1 ]; then log_Skynet "[!] Waiting for internet connectivity..."; fi
-		if [ $i -eq 6 ]; then log_Skynet "[*] Internet connectivity error"; echo; exit 1; fi
-		sleep 9
+		if [ $i -eq 7 ]; then log_Skynet "[*] Internet connectivity error"; echo; exit 1; fi
+		sleep 10
 	done
 fi
 
@@ -729,6 +732,7 @@ case "$command" in
 		header "Reset"
 		log_Skynet "[i] Install"
 		cru d Skynet_update; minutes=$(($(date +%M) % 15))
+		cru a Skynet_update "$((minutes + 0)),$((minutes + 15)),$((minutes + 30)),$((minutes + 45)) * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		rm -f "$dir_cache/"* "$dir_debug/"* "$dir_etag/"* "$dir_filtered/"*
 		rm -f "$dir_reload/"* "$dir_system/"* "$dir_temp/"* "$dir_update/"*
 		true > "$dir_skynet/warning.log"
@@ -762,7 +766,6 @@ case "$command" in
 		load_Blocklist
 		load_Domain
 		download_Set
-		cru a Skynet_update "$((minutes + 0)),$((minutes + 15)),$((minutes + 30)),$((minutes + 45)) * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
