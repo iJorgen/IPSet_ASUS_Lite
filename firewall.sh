@@ -66,6 +66,7 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
 					<Cruzit_Webattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {2}
+					<CyclopsBlinkCC>		https://raw.githubusercontent.com/fariajose/skynet/main/Cyclops-Blink-CC-servers.txt  {4}
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
 					<Darklist>				https://iplists.firehol.org/files/darklist_de.netset  {4}
 					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
