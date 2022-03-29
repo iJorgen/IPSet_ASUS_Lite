@@ -66,7 +66,7 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
 					<Cruzit_Webattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {2}
-					<CyclopsBlinkCC>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/CyclopsBlink  {8}
+					<CyclopsBlink>			https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/CyclopsBlink  {8}
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
 					<Darklist>				https://iplists.firehol.org/files/darklist_de.netset  {4}
 					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
@@ -737,7 +737,7 @@ case "$command" in
 		header "Reset"
 		log_Skynet "[i] Install"
 		cru d Skynet_update; minutes=$(($(date +%M) % 15))
-		cru a Skynet_update "$((minutes + 0)),$((minutes + 15)),$((minutes + 30)),$((minutes + 45)) * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "9,24,39,54 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		rm -f "$dir_cache/"* "$dir_debug/"* "$dir_etag/"* "$dir_filtered/"*
 		rm -f "$dir_reload/"* "$dir_system/"* "$dir_temp/"* "$dir_update/"*
 		true > "$dir_skynet/warning.log"
