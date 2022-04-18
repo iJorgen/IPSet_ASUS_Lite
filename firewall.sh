@@ -60,14 +60,14 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {4}
-					<CyclopsBlink>			https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/CyclopsBlink  {8}
-					<Darklist>				https://iplists.firehol.org/files/darklist_de.netset  {4}
-					<FullBogons>			https://iplists.firehol.org/files/iblocklist_cidr_report_bogons.netset  {4}
-					<IPSum_Level1>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/1.txt  {6}
-					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}
-					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
-					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}"
+blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {1}
+					<CyclopsBlink>			https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/CyclopsBlink  {4}
+					<Darklist>				https://iplists.firehol.org/files/darklist_de.netset  {1}
+					<FullBogons>			https://iplists.firehol.org/files/iblocklist_cidr_report_bogons.netset  {1}
+					<IPSum_Level1>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/1.txt  {1}
+					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {8}
+					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {1}
+					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {1}"
 blocklist_ip=""
 blocklist_domain=""
 passlist_ip="		192.36.27.86
@@ -724,7 +724,7 @@ case "$command" in
 		header "Reset"
 		log_Skynet "[i] Install"
 		cru d Skynet_update; minutes=$(($(date +%M) % 15))
-		cru a Skynet_update "9,24,39,54 * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "54 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		rm -f "$dir_cache/"* "$dir_debug/"* "$dir_etag/"* "$dir_filtered/"*
 		rm -f "$dir_reload/"* "$dir_system/"* "$dir_temp/"* "$dir_update/"*
 		true > "$dir_skynet/warning.log"
