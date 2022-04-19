@@ -74,7 +74,7 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<Firehol_WebClient>		https://iplists.firehol.org/files/firehol_webclient.netset  {2}
 					<FullBogons>			https://iplists.firehol.org/files/iblocklist_cidr_report_bogons.netset  {4}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
-					<IPSum_Level1>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/1.txt  {4}
+					<IPSum_Level2>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {4}
 					<MyIP>					https://iplists.firehol.org/files/myip.ipset  {2}
 					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {32}
 					<SocksProxy_1d>			https://iplists.firehol.org/files/socks_proxy_1d.ipset  {1}
@@ -93,6 +93,7 @@ passlist_ip="		192.36.27.86
 					1.1.1.1
 					1.0.0.1
 					81.3.6.164
+					81.3.6.165
 					81.3.6.166
 					104.23.98.190
 					104.23.99.190"
