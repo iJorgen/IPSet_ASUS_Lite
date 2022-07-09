@@ -62,11 +62,10 @@ loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {4}
 					<Bitcoin_nodes>			https://iplists.firehol.org/files/bitcoin_nodes.ipset  {1}
-					<Blocklist.de>			https://iplists.firehol.org/files/blocklist_de.ipset  {1}
+					<Blocklist_de>			https://iplists.firehol.org/files/blocklist_de.ipset  {1}
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
 					<Cruzit_Webattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {2}
-					<CyclopsBlink>			https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/CyclopsBlink  {8}
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
 					<Darklist>				https://iplists.firehol.org/files/darklist_de.netset  {4}
 					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
@@ -80,12 +79,12 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<SocksProxy_1d>			https://iplists.firehol.org/files/socks_proxy_1d.ipset  {1}
 					<SSLProxy_1d>			https://iplists.firehol.org/files/sslproxies_1d.ipset  {1}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
-					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
-					<Xroxy_1d>				https://iplists.firehol.org/files/xroxy_1d.ipset  {4}"
+					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}"
 blocklist_ip=""
 blocklist_domain=""
 passlist_ip="		192.36.27.86
 					188.172.192.71
+					93.189.61.195
 					45.90.28.0
 					45.90.30.0
 					8.8.8.8
@@ -96,7 +95,9 @@ passlist_ip="		192.36.27.86
 					81.3.6.165
 					81.3.6.166
 					104.23.98.190
-					104.23.99.190"
+					104.23.99.190
+					203.107.6.88
+					120.25.115.20"
 passlist_domain="	dns.nextdns.io
 					dns1.nextdns.io
 					dns2.nextdns.io
