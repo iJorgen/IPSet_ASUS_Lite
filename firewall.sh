@@ -79,8 +79,7 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<SocksProxy_1d>			https://iplists.firehol.org/files/socks_proxy_1d.ipset  {1}
 					<SSLProxy_1d>			https://iplists.firehol.org/files/sslproxies_1d.ipset  {1}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
-					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
-					<UltimateBlacklist>		https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/master/ips/ips0.list  {4}"
+					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}"
 blocklist_ip=""
 blocklist_domain=""
 passlist_ip="		192.36.27.86
