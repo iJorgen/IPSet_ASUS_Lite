@@ -66,10 +66,8 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
 					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {2}
-					<EmergingThreats>		https://iplists.firehol.org/files/et_compromised.ipset  {4}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {2}
 					<IPSum_Level3>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt  {4}
-					<MyIP>					https://iplists.firehol.org/files/myip.ipset  {2}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
 					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}"
 blocklist_ip=""
