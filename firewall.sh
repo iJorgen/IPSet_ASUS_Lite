@@ -61,16 +61,13 @@ logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {4}
-					<Blocklist_de>			https://iplists.firehol.org/files/blocklist_de.ipset  {1}
-					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
+					<Blocklist_de>			https://iplists.firehol.org/files/blocklist_de.ipset  {2}
+					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {2}
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
-					<Cruzit_Webattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {2}
-					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
 					<Darklist>				https://iplists.firehol.org/files/darklist_de.netset  {4}
-					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
+					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {2}
 					<EmergingThreats>		https://iplists.firehol.org/files/et_compromised.ipset  {4}
-					<Firehol_WebClient>		https://iplists.firehol.org/files/firehol_webclient.netset  {2}
-					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
+					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {2}
 					<IPSum_Level3>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt  {4}
 					<MyIP>					https://iplists.firehol.org/files/myip.ipset  {2}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
