@@ -685,8 +685,8 @@ fi
 i=0
 while [ "$(nvram get ntp_ready)" != "1" ] && [ "$command" != "uninstall" ]; do
 	if [ $i -eq 0 ]; then log_Skynet "[i] Waiting for NTP to sync..."; fi
-	if [ $i -eq 20 ]; then log_Skynet "[*] NTP failed to start after 5 minutes - Please fix immediately!"; echo; exit 1; fi
-	i=$((i + 1)); sleep 15
+	if [ $i -eq 15 ]; then log_Skynet "[*] NTP failed to start after 5 minutes - Please fix immediately!"; echo; exit 1; fi
+	i=$((i + 1)); sleep 20
 done
 
 
