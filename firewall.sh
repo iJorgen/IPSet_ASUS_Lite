@@ -65,6 +65,7 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
 					<Cruzit_Webattacks>		https://iplists.firehol.org/files/cruzit_web_attacks.ipset  {2}
+					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
 					<Darklist>				https://iplists.firehol.org/files/darklist_de.netset  {4}
 					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
 					<EmergingThreats>		https://iplists.firehol.org/files/et_compromised.ipset  {4}
@@ -94,6 +95,7 @@ passlist_ip="		192.36.27.86
 					76.76.2.2
 					13.49.168.178
 					94.140.14.14
+					94.140.15.15
 					81.3.6.164
 					81.3.6.165
 					81.3.6.166
@@ -686,10 +688,10 @@ fi
 i=0
 while [ "$(nvram get ntp_ready)" != "1" ] && [ "$command" != "uninstall" ]; do
 	if [ $i -eq 0 ]; then log_Skynet "[i] Waiting for NTP to sync..."; fi
-	if [ $i -eq 300 ]; then log_Skynet "[*] NTP failed to start after 5 minutes - Please fix immediately!"; echo; exit 1; fi
-	i=$((i + 1)); sleep 1
+	if [ $i -eq 20 ]; then log_Skynet "[*] NTP failed to start after 5 minutes - Please fix immediately!"; echo; exit 1; fi
+	i=$((i + 1)); sleep 15
 done
-sleep 10
+
 
 if [ "$command" = "update" ] || [ "$command" = "reset" ]; then
 	for i in 1 2 3 4 5 6 7; do
