@@ -2,12 +2,8 @@
 #  ___ _                 _     _    _ _
 # / __| |___  _ _ _  ___| |_  | |  (_) |_ ___
 # \__ \ / / || | ' \/ -_)  _| | |__| |  _/ -_)
-# |___/_\_\\_, |_||_\___|\__| |____|_|\__\___|  ForkKnox Edition
+# |___/_\_\\_, |_||_\___|\__| |____|_|\__\___|
 #          |__/
-#
-#   Skynet Lite (ForkKnox Edition) by iJorgen
-#   IP Blocking For ASUS Routers Using IPSet (with additional blocklists)
-#   https://github.com/iJorgen/IPSet_ASUS_Lite
 #
 #   Skynet Lite by Willem Bartels
 #   IP Blocking for ASUS Routers Using IPSet
@@ -30,7 +26,7 @@
 # By default, the set update process is started after 4 cycles = 1 hour.
 # This value can be overridden per set with the {n} tag.
 # If supported only changed files will be downloaded, see URL's below for more info.
-# This way the update frequencies can be relative high without overloading the servers.
+# This way the update check frequencies can be relative high without overloading the servers.
 #
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Modified-Since
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match
@@ -46,9 +42,7 @@
 # The items on these lists must be separated with a space, tab or newline.
 # blocklist_ip, blocklist_domain and passlist_ip can optionally use one <comment> tag per list.
 #
-# feb 2022: Torproject tor-exits aren't updated for months.
-# Thanks https://github.com/SecOps-Institute for creating a tor-exit-nodes list.
-#
+
 
 
 ###################
@@ -71,39 +65,15 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}"
 blocklist_ip=""
 blocklist_domain=""
-passlist_ip="		192.36.27.86
-					188.172.192.71
-					93.189.61.195
-					45.90.28.0
-					45.90.30.0
-					8.8.8.8
-					8.8.4.4
-					9.9.9.9
-					1.1.1.1
-					1.1.1.2
-					1.1.1.3
-					1.0.0.1
-					1.0.0.2
-					1.0.0.3
-					76.76.2.2
-					76.76.2.11
-					94.140.14.14
-					94.140.15.15
-					81.3.6.164
-					81.3.6.165
-					81.3.6.166
-					104.23.98.190
-					104.23.99.190
-					203.107.6.88
-					120.25.115.20"
-passlist_domain="	dns.nextdns.io
-					dns1.nextdns.io
-					dns2.nextdns.io
-					doh.dns.nextdns.io
-					doh3.dns.nextdns.io
-					steering.nextdns.io
-					one.one.one.one
-					dns.msftncsi.com"
+
+passlist_ip=""
+passlist_domain="	dns.adguard.com
+					dns.cloudflare.com
+					dns.google
+					dns.nextdns.io
+					dns.opendns.com
+					dns.quad9.net
+					one.one.one.one"
 
 
 ###############
@@ -367,8 +337,8 @@ update_Counter() {
 
 
 # rand() {
-#	local min=$1 max=$2
-#	echo -n $((min + $(printf '%d' 0x$(openssl rand -hex 2)) * (max - min + 1) / 65025))
+# 	local min=$1 max=$2
+# 	echo -n $((min + $(printf '%d' 0x$(openssl rand -hex 2)) * (max - min + 1) / 65025))
 # }
 
 
@@ -376,7 +346,6 @@ header() {
 	if [ "$option" = "cru" ]; then return; fi
 	printf '\033[?7l' # disable line wrap
 	clear; sed -n '2,7s/#//p' "$0"
-	echo " Skynet Lite (ForkKnox Edition) by iJorgen"
 	echo " Skynet Lite $version by Willem Bartels"
 	echo " Code is based on Skynet By Adamm"
 	echo
@@ -430,7 +399,9 @@ load_Passlist() {
 		add Skynet-Temp 224.0.0.0/3 comment \"Passlist: Multicast/reserved/limited broadcast\""
 	local passlist_domain="$passlist_domain
 		$(echo "$blocklist_set $(nvram get firmware_server) $(nvram get ntp_server0) $(nvram get ntp_server1)" | strip_Domain)
+		fastly.com
 		github.com
+		ibm.com
 		raw.githubusercontent.com
 		www.internic.net"
 
@@ -672,6 +643,7 @@ mkdir -p "$dir_reload" "$dir_system" "$dir_temp" "$dir_update"
 
 domain=$(echo "$command" | is_Domain) && command="domain"
 ip=$(echo "$command" | is_IP) && command="ip"
+
 if ! ipset list -n Skynet-Primary >/dev/null 2>&1; then
 	command="reset"
 	option=""
@@ -681,15 +653,15 @@ fi
 i=0
 while [ "$(nvram get ntp_ready)" != "1" ] && [ "$command" != "uninstall" ]; do
 	if [ $i -eq 0 ]; then log_Skynet "[i] Waiting for NTP to sync..."; fi
-	if [ $i -eq 15 ]; then log_Skynet "[*] NTP failed to start after 5 minutes - Please fix immediately!"; echo; exit 1; fi
-	i=$((i + 1)); sleep 20
+	if [ $i -eq 300 ]; then log_Skynet "[*] NTP failed to start after 5 minutes - Please fix immediately!"; echo; exit 1; fi
+	i=$((i + 1)); sleep 1
 done
 
 
 if [ "$command" = "update" ] || [ "$command" = "reset" ]; then
 	for i in 1 2 3 4 5 6 7; do
-		if ping -q -w1 -c1 one.one.one.one >/dev/null 2>&1; then break; fi
-		if ping -q -w1 -c1 ntp.se >/dev/null 2>&1; then break; fi
+		if ping -q -w1 -c1 ibm.com >/dev/null 2>&1; then break; fi
+		if ping -q -w1 -c1 fastly.com >/dev/null 2>&1; then break; fi
 		if ping -q -w1 -c1 github.com >/dev/null 2>&1; then break; fi
 		if [ $i -eq 1 ]; then log_Skynet "[!] Waiting for internet connectivity..."; fi
 		if [ $i -eq 7 ]; then log_Skynet "[*] Internet connectivity error"; echo; exit 1; fi
@@ -705,8 +677,8 @@ if ! flock -n 99; then
 		exit 1;
 	fi
 	printf '\n\033[1A' # newline and cursor up
-	printf '[i] Skynet Lite is locked, retry command every 2 seconds...'
-	sleep 2
+	printf '[i] Skynet Lite is locked, retry command every 5 seconds...'
+	sleep 5
 	exec "$0" "$command"
 fi
 
@@ -737,8 +709,6 @@ case "$command" in
 	reset)
 		header "Reset"
 		log_Skynet "[i] Install"
-		cru d Skynet_update; minutes=$(($(date +%M) % 15))
-		cru a Skynet_update "9,24,39,54 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		rm -f "$dir_cache/"* "$dir_debug/"* "$dir_etag/"* "$dir_filtered/"*
 		rm -f "$dir_reload/"* "$dir_system/"* "$dir_temp/"* "$dir_update/"*
 		true > "$dir_skynet/warning.log"
@@ -772,6 +742,8 @@ case "$command" in
 		load_Blocklist
 		load_Domain
 		download_Set
+		cru d Skynet_update; minutes=$(($(date +%M) % 15))
+		cru a Skynet_update "$((minutes + 0)),$((minutes + 15)),$((minutes + 30)),$((minutes + 45)) * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
