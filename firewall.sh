@@ -63,10 +63,18 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<IPSum_Level2>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {4}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
 					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}"
-blocklist_ip=""
+blocklist_ip="		146.19.3.129
+					217.146.31.87"
 blocklist_domain=""
 
-passlist_ip=""
+passlist_ip="		192.36.27.86
+					188.172.192.71
+					81.3.6.162
+					81.3.6.163
+					81.3.6.164
+					81.3.6.165
+					81.3.6.166
+					81.3.6.167"
 passlist_domain="	dns.adguard.com
 					dns.cloudflare.com
 					dns.google
