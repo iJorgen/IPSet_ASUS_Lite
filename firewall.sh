@@ -54,7 +54,7 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set"		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4}
+blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4}
 					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {2}
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
