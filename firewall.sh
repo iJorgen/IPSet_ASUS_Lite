@@ -66,7 +66,9 @@ blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4
 blocklist_ip=""
 blocklist_domain=""
 
-passlist_ip="		192.36.27.86
+passlist_ip="		45.90.28.0
+					45.90.30.0
+					192.36.27.86
 					188.172.192.71
 					81.3.6.162
 					81.3.6.163
@@ -80,7 +82,12 @@ passlist_domain="	dns.adguard.com
 					dns.nextdns.io
 					dns.opendns.com
 					dns.quad9.net
-					one.one.one.one"
+					one.one.one.one
+					freedns.controld.com
+					controld.com
+					blitz.ahadns.com
+					ahadns.com
+					mullvad.net"
 
 
 ###############
