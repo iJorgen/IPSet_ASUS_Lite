@@ -58,7 +58,7 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {2}
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
-					<Dshield_1d>			https://iplists.firehol.org/files/dshield_1d.netset  {2}
+					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {2}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {2}
 					<IPSum_Level2>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {4}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
@@ -76,16 +76,20 @@ passlist_ip="		45.90.28.0
 					81.3.6.165
 					81.3.6.166
 					81.3.6.167"
-passlist_domain="	dns.adguard.com
+passlist_domain="	dns.adguard-dns.com
+					d.adguard-dns.com
+					dns.adguard.com
 					dns.cloudflare.com
 					dns.google
 					dns.nextdns.io
+					steering.nextdns.io
 					dns.opendns.com
 					dns.quad9.net
 					one.one.one.one
+					dns.controld.com
 					freedns.controld.com
-					controld.com
 					blitz.ahadns.com
+					dns.dnswarden.com
 					ahadns.com
 					mullvad.net
 					adblock.doh.mullvad.net"
