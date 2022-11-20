@@ -60,7 +60,7 @@ blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
 					<Dshield_1d>			https://iplists.firehol.org/files/dshield_7d.netset  {2}
 					<GreenSnow>				https://blocklist.greensnow.co/greensnow.txt  {2}
-					<IPSum_Level2>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {6}
+					<IPSum_Level2>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {4}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
 					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}"
 blocklist_ip=""
@@ -87,7 +87,8 @@ passlist_domain="	dns.adguard.com
 					controld.com
 					blitz.ahadns.com
 					ahadns.com
-					mullvad.net"
+					mullvad.net
+					adblock.doh.mullvad.net"
 
 
 ###############
