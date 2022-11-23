@@ -71,27 +71,28 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<Armenia>				https://www.ipdeny.com/ipblocks/data/aggregated/am-aggregated.zone  {96}
 					<Azerbaijan>			https://www.ipdeny.com/ipblocks/data/aggregated/az-aggregated.zone  {96}
 					<Belarus>				https://www.ipdeny.com/ipblocks/data/aggregated/by-aggregated.zone  {96}
+					<Brazil>				https://www.ipdeny.com/ipblocks/data/aggregated/br-aggregated.zone  {96}
 					<Bulgaria>				https://www.ipdeny.com/ipblocks/data/aggregated/bg-aggregated.zone  {96}
 					<China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {96}
 					<Cuba>					https://www.ipdeny.com/ipblocks/data/aggregated/cu-aggregated.zone  {96}
 					<Egypt>					https://www.ipdeny.com/ipblocks/data/aggregated/eg-aggregated.zone  {96}
-					<Georgia>				https://www.ipdeny.com/ipblocks/data/aggregated/ge-aggregated.zone  {96}
-					<HongKong>				https://www.ipdeny.com/ipblocks/data/aggregated/hk-aggregated.zone  {96}
+					<India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {96}
+					<Indonesia>				https://www.ipdeny.com/ipblocks/data/aggregated/id-aggregated.zone  {96}
 					<Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {96}
 					<Iraq>					https://www.ipdeny.com/ipblocks/data/aggregated/iq-aggregated.zone  {96}
 					<Israel>				https://www.ipdeny.com/ipblocks/data/aggregated/il-aggregated.zone  {96}
 					<Kazakhstan>			https://www.ipdeny.com/ipblocks/data/aggregated/kz-aggregated.zone  {96}
-					<Korea_N>				https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {96}
-					<Korea_S>				https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {96}
-					<Kyrgyzstan>			https://www.ipdeny.com/ipblocks/data/aggregated/kg-aggregated.zone  {96}
-					<Moldavia>				https://www.ipdeny.com/ipblocks/data/aggregated/md-aggregated.zone  {96}
+					<Nigeria>				https://www.ipdeny.com/ipblocks/data/aggregated/ng-aggregated.zone  {96}
+					<NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {96}
+					<Pakistan>				https://www.ipdeny.com/ipblocks/data/aggregated/pk-aggregated.zone  {96}
+					<Romania>				https://www.ipdeny.com/ipblocks/data/aggregated/ro-aggregated.zone  {96}
 					<Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {96}
 					<SaudiArabia>			https://www.ipdeny.com/ipblocks/data/aggregated/sa-aggregated.zone  {96}
 					<Seychelles>			https://www.ipdeny.com/ipblocks/data/aggregated/sc-aggregated.zone  {96}
+					<SouthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {96}
 					<Syria>					https://www.ipdeny.com/ipblocks/data/aggregated/sy-aggregated.zone  {96}
-					<Tajikistan>			https://www.ipdeny.com/ipblocks/data/aggregated/tj-aggregated.zone  {96}
 					<Ukraine>				https://www.ipdeny.com/ipblocks/data/aggregated/ua-aggregated.zone  {96}
-					<Uzbekistan>			https://www.ipdeny.com/ipblocks/data/aggregated/uz-aggregated.zone  {96}"
+					<Venezuela>				https://www.ipdeny.com/ipblocks/data/aggregated/ve-aggregated.zone  {96}"
 blocklist_ip=""
 blocklist_domain=""
 
