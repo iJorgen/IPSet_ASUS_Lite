@@ -61,12 +61,36 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<Dshield_1d>			https://iplists.firehol.org/files/dshield_1d.netset  {2}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {2}
 					<IPSum_Level2>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {4}
-					<RiskyCountries>		https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/blockcountries  {16}
 					<Socks_Proxy_1d>		https://iplists.firehol.org/files/socks_proxy_1d.ipset  {2}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {8}
 					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {8}
 					<ThreatView_OSINT>		https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {6}
-					<ThreatView_HiConf>		https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {6}"
+					<ThreatView_HiConf>		https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {6}
+					<Afghanistan>			https://www.ipdeny.com/ipblocks/data/aggregated/af-aggregated.zone  {96}
+					<ArabEmirate>			https://www.ipdeny.com/ipblocks/data/aggregated/ae-aggregated.zone  {96}
+					<Armenia>				https://www.ipdeny.com/ipblocks/data/aggregated/am-aggregated.zone  {96}
+					<Azerbaijan>			https://www.ipdeny.com/ipblocks/data/aggregated/az-aggregated.zone  {96}
+					<Belarus>				https://www.ipdeny.com/ipblocks/data/aggregated/by-aggregated.zone  {96}
+					<Bulgaria>				https://www.ipdeny.com/ipblocks/data/aggregated/bg-aggregated.zone  {96}
+					<China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {96}
+					<Cuba>					https://www.ipdeny.com/ipblocks/data/aggregated/cu-aggregated.zone  {96}
+					<Egypt>					https://www.ipdeny.com/ipblocks/data/aggregated/eg-aggregated.zone  {96}
+					<Georgia>				https://www.ipdeny.com/ipblocks/data/aggregated/ge-aggregated.zone  {96}
+					<Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {96}
+					<Iraq>					https://www.ipdeny.com/ipblocks/data/aggregated/iq-aggregated.zone  {96}
+					<Israel>				https://www.ipdeny.com/ipblocks/data/aggregated/il-aggregated.zone  {96}
+					<Kazakhstan>			https://www.ipdeny.com/ipblocks/data/aggregated/kz-aggregated.zone  {96}
+					<Korea_N>				https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {96}
+					<Korea_S>				https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {96}
+					<Kyrgyzstan>			https://www.ipdeny.com/ipblocks/data/aggregated/kg-aggregated.zone  {96}
+					<Moldavia>				https://www.ipdeny.com/ipblocks/data/aggregated/md-aggregated.zone  {96}
+					<Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {96}
+					<SaudiArabia>			https://www.ipdeny.com/ipblocks/data/aggregated/sa-aggregated.zone  {96}
+					<Seychelles>			https://www.ipdeny.com/ipblocks/data/aggregated/sc-aggregated.zone  {96}
+					<Syria>					https://www.ipdeny.com/ipblocks/data/aggregated/sy-aggregated.zone  {96}
+					<Tajikistan>			https://www.ipdeny.com/ipblocks/data/aggregated/tj-aggregated.zone  {96}
+					<Ukraine>				https://www.ipdeny.com/ipblocks/data/aggregated/ua-aggregated.zone  {96}
+					<Uzbekistan>			https://www.ipdeny.com/ipblocks/data/aggregated/uz-aggregated.zone  {96}"
 blocklist_ip=""
 blocklist_domain=""
 
@@ -74,7 +98,8 @@ passlist_ip="		45.90.28.0
 					45.90.30.0
 					192.36.27.86
 					188.172.192.71
-					93.189.61.195
+					120.25.115.20
+					203.107.6.88
 					81.3.6.162
 					81.3.6.163
 					81.3.6.164
@@ -571,6 +596,8 @@ download_Set() {
 		etag="$dir_etag/$setname"; touch "$etag"
 		filtered_temp="$dir_temp/${setname}_filtered"
 		filtered_cache="$dir_filtered/$setname"
+
+		sleep 1
 
 		response_code=$(curl -sf --location \
 			--limit-rate "$throttle" --user-agent "$useragent" \
