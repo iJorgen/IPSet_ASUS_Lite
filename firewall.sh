@@ -76,6 +76,7 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<Cuba>					https://www.ipdeny.com/ipblocks/data/aggregated/cu-aggregated.zone  {96}
 					<Egypt>					https://www.ipdeny.com/ipblocks/data/aggregated/eg-aggregated.zone  {96}
 					<Georgia>				https://www.ipdeny.com/ipblocks/data/aggregated/ge-aggregated.zone  {96}
+					<HongKong>				https://www.ipdeny.com/ipblocks/data/aggregated/hk-aggregated.zone  {96}
 					<Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {96}
 					<Iraq>					https://www.ipdeny.com/ipblocks/data/aggregated/iq-aggregated.zone  {96}
 					<Israel>				https://www.ipdeny.com/ipblocks/data/aggregated/il-aggregated.zone  {96}
