@@ -598,8 +598,6 @@ download_Set() {
 		filtered_temp="$dir_temp/${setname}_filtered"
 		filtered_cache="$dir_filtered/$setname"
 
-		sleep 1
-
 		response_code=$(curl -sf --location \
 			--limit-rate "$throttle" --user-agent "$useragent" \
 			--connect-timeout 10 --retry 2 --retry-max-time 60 \
@@ -619,6 +617,7 @@ download_Set() {
 			else
 				log_Skynet "[i] Update $comment"
 				load_Set
+				sleep 1
 				mv -f "$temp" "$cache"
 				mv -f "$filtered_temp" "$filtered_cache"
 				mv -f "$etag_temp" "$etag"
