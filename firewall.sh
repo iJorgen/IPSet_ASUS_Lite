@@ -115,10 +115,8 @@ passlist_domain="	dns.adguard-dns.com
 					d.adguard-dns.com
 					dns.adguard.com
 					dns.cloudflare.com
-					dns.google
 					dns.nextdns.io
 					steering.nextdns.io
-					dns.opendns.com
 					dns.quad9.net
 					one.one.one.one
 					dns.controld.com
