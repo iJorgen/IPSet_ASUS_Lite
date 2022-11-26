@@ -54,41 +54,34 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {4}
+blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {6}
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {4}
-					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
+					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {6}
 					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
 					<Dshield_1d>			https://iplists.firehol.org/files/dshield_1d.netset  {2}
 					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {2}
-					<IPSum_Level2>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {4}
-					<Socks_Proxy_1d>		https://iplists.firehol.org/files/socks_proxy_1d.ipset  {2}
+					<IPSum_Level2>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {6}
+					<Socks_Proxy_1d>		https://iplists.firehol.org/files/socks_proxy_1d.ipset  {4}
 					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {8}
 					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {8}
-					<ThreatView_OSINT>		https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {6}
-					<ThreatView_HiConf>		https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {6}
-					<Afghanistan>			https://www.ipdeny.com/ipblocks/data/aggregated/af-aggregated.zone  {96}
+					<ThreatView_OSINT>		https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {8}
+					<ThreatView_HiConf>		https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {8}
 					<ArabEmirate>			https://www.ipdeny.com/ipblocks/data/aggregated/ae-aggregated.zone  {96}
 					<Armenia>				https://www.ipdeny.com/ipblocks/data/aggregated/am-aggregated.zone  {96}
 					<Belarus>				https://www.ipdeny.com/ipblocks/data/aggregated/by-aggregated.zone  {96}
 					<Brazil>				https://www.ipdeny.com/ipblocks/data/aggregated/br-aggregated.zone  {96}
 					<Bulgaria>				https://www.ipdeny.com/ipblocks/data/aggregated/bg-aggregated.zone  {96}
 					<China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {96}
-					<Egypt>					https://www.ipdeny.com/ipblocks/data/aggregated/eg-aggregated.zone  {96}
 					<Hungary>				https://www.ipdeny.com/ipblocks/data/aggregated/hu-aggregated.zone  {96}
 					<India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {96}
 					<Indonesia>				https://www.ipdeny.com/ipblocks/data/aggregated/id-aggregated.zone  {96}
 					<Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {96}
-					<Iraq>					https://www.ipdeny.com/ipblocks/data/aggregated/iq-aggregated.zone  {96}
 					<Israel>				https://www.ipdeny.com/ipblocks/data/aggregated/il-aggregated.zone  {96}
 					<Japan>					https://www.ipdeny.com/ipblocks/data/aggregated/jp-aggregated.zone  {96}
-					<Nigeria>				https://www.ipdeny.com/ipblocks/data/aggregated/ng-aggregated.zone  {96}
 					<NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {96}
 					<Pakistan>				https://www.ipdeny.com/ipblocks/data/aggregated/pk-aggregated.zone  {96}
 					<Romania>				https://www.ipdeny.com/ipblocks/data/aggregated/ro-aggregated.zone  {96}
 					<Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {96}
-					<SaudiArabia>			https://www.ipdeny.com/ipblocks/data/aggregated/sa-aggregated.zone  {96}
-					<SouthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {96}
-					<Syria>					https://www.ipdeny.com/ipblocks/data/aggregated/sy-aggregated.zone  {96}
 					<Taiwan>				https://www.ipdeny.com/ipblocks/data/aggregated/tw-aggregated.zone  {96}
 					<Thailand>				https://www.ipdeny.com/ipblocks/data/aggregated/th-aggregated.zone  {96}
 					<Turkey>				https://www.ipdeny.com/ipblocks/data/aggregated/tr-aggregated.zone  {96}
