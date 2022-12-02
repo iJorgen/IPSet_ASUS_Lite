@@ -97,10 +97,11 @@ blocklist_domain=""
 
 passlist_ip="		45.90.28.0
 					45.90.30.0
-					192.36.27.86
-					188.172.192.71
-					193.9.112.136
-					37.120.149.148
+					1.1.1.1
+					1.0.0.1
+					8.8.8.8
+					9.9.9.9
+					149.112.112.112
 					103.10.4.85
 					81.3.6.162
 					81.3.6.163
@@ -108,20 +109,26 @@ passlist_ip="		45.90.28.0
 					81.3.6.165
 					81.3.6.166
 					81.3.6.167"
-passlist_domain="	dns.adguard-dns.com
-					d.adguard-dns.com
-					dns.adguard.com
-					dns.cloudflare.com
+passlist_domain="	anexia-cph-1.edge.nextdns.io
+					edis-cph-1.edge.nextdns.io
+					anexia-osl-1.edge.nextdns.io
+					anexia-sto-1.edge.nextdns.io
+					zepto-sto-1.edge.nextdns.io
+					zepto-osl-1.edge.nextdns.io
+					zepto-ams-1.edge.nextdns.io
+					vultr-ams-1.edge.nextdns.io
+					anexia-prg-1.edge.nextdns.io
+					zepto-prg-1.edge.nextdns.io
 					dns.nextdns.io
 					steering.nextdns.io
-					dns.quad9.net
-					one.one.one.one
+					dns.adguard-dns.com
+					d.adguard-dns.com
+					dns.adguard.com
 					dns.controld.com
 					freedns.controld.com
 					blitz.ahadns.com
 					dns.dnswarden.com
 					ahadns.com
-					mullvad.net
 					adblock.doh.mullvad.net
 					www.ipdeny.com"
 
