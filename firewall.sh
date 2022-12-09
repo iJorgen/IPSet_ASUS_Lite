@@ -68,20 +68,15 @@ blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ip
 					<ThreatView_OSINT>		https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {8}
 					<ThreatView_HiConf>		https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {8}
 					<ArabEmirate>			https://www.ipdeny.com/ipblocks/data/aggregated/ae-aggregated.zone  {32}
-					<Armenia>				https://www.ipdeny.com/ipblocks/data/aggregated/am-aggregated.zone  {32}
-					<Belarus>				https://www.ipdeny.com/ipblocks/data/aggregated/by-aggregated.zone  {32}
 					<Brazil>				https://www.ipdeny.com/ipblocks/data/aggregated/br-aggregated.zone  {32}
-					<Bulgaria>				https://www.ipdeny.com/ipblocks/data/aggregated/bg-aggregated.zone  {32}
 					<China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {32}
 					<HongKong>				https://www.ipdeny.com/ipblocks/data/aggregated/hk-aggregated.zone  {32}
-					<Hungary>				https://www.ipdeny.com/ipblocks/data/aggregated/hu-aggregated.zone  {32}
 					<India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {32}
 					<Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {32}
 					<Israel>				https://www.ipdeny.com/ipblocks/data/aggregated/il-aggregated.zone  {32}
 					<Japan>					https://www.ipdeny.com/ipblocks/data/aggregated/jp-aggregated.zone  {32}
 					<NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {32}
 					<Pakistan>				https://www.ipdeny.com/ipblocks/data/aggregated/pk-aggregated.zone  {32}
-					<Romania>				https://www.ipdeny.com/ipblocks/data/aggregated/ro-aggregated.zone  {32}
 					<Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {32}
 					<Taiwan>				https://www.ipdeny.com/ipblocks/data/aggregated/tw-aggregated.zone  {32}
 					<Thailand>				https://www.ipdeny.com/ipblocks/data/aggregated/th-aggregated.zone  {32}
