@@ -54,34 +54,34 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {6}
-					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {4}
-					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {6}
-					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
-					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {4}
-					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {2}
-					<IPSum_Level2>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {6}
-					<Socks_Proxy_7d>		https://iplists.firehol.org/files/socks_proxy_7d.ipset  {2}
-					<SSL_Proxy_7d>			https://iplists.firehol.org/files/sslproxies_7d.ipset  {2}
-					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {8}
-					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {8}
-					<ThreatView_OSINT>		https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {8}
-					<ThreatView_HiConf>		https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {8}
-					<ArabEmirate>			https://www.ipdeny.com/ipblocks/data/aggregated/ae-aggregated.zone  {32}
-					<Brazil>				https://www.ipdeny.com/ipblocks/data/aggregated/br-aggregated.zone  {32}
-					<China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {32}
-					<HongKong>				https://www.ipdeny.com/ipblocks/data/aggregated/hk-aggregated.zone  {32}
-					<India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {32}
-					<Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {32}
-					<Israel>				https://www.ipdeny.com/ipblocks/data/aggregated/il-aggregated.zone  {32}
-					<Japan>					https://www.ipdeny.com/ipblocks/data/aggregated/jp-aggregated.zone  {32}
-					<NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {32}
-					<Pakistan>				https://www.ipdeny.com/ipblocks/data/aggregated/pk-aggregated.zone  {32}
-					<Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {32}
-					<Taiwan>				https://www.ipdeny.com/ipblocks/data/aggregated/tw-aggregated.zone  {32}
-					<Thailand>				https://www.ipdeny.com/ipblocks/data/aggregated/th-aggregated.zone  {32}
-					<Turkey>				https://www.ipdeny.com/ipblocks/data/aggregated/tr-aggregated.zone  {32}
-					<Ukraine>				https://www.ipdeny.com/ipblocks/data/aggregated/ua-aggregated.zone  {32}"
+blocklist_set="		<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {1}
+					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
+					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {2}
+					<DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
+					<Dshield_7d>			https://iplists.firehol.org/files/dshield_7d.netset  {1}
+					<GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
+					<IPSum_Level2>			https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
+					<Socks_Proxy_7d>		https://iplists.firehol.org/files/socks_proxy_7d.ipset  {1}
+					<SSL_Proxy_7d>			https://iplists.firehol.org/files/sslproxies_7d.ipset  {1}
+					<Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {1}
+					<Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {1}
+					<ThreatView_OSINT>		https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
+					<ThreatView_HiConf>		https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
+					<ArabEmirate>			https://www.ipdeny.com/ipblocks/data/aggregated/ae-aggregated.zone  {8}
+					<Brazil>				https://www.ipdeny.com/ipblocks/data/aggregated/br-aggregated.zone  {8}
+					<China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {8}
+					<HongKong>				https://www.ipdeny.com/ipblocks/data/aggregated/hk-aggregated.zone  {8}
+					<India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {8}
+					<Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {8}
+					<Israel>				https://www.ipdeny.com/ipblocks/data/aggregated/il-aggregated.zone  {8}
+					<Japan>					https://www.ipdeny.com/ipblocks/data/aggregated/jp-aggregated.zone  {8}
+					<NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {8}
+					<Pakistan>				https://www.ipdeny.com/ipblocks/data/aggregated/pk-aggregated.zone  {8}
+					<Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {8}
+					<Taiwan>				https://www.ipdeny.com/ipblocks/data/aggregated/tw-aggregated.zone  {8}
+					<Thailand>				https://www.ipdeny.com/ipblocks/data/aggregated/th-aggregated.zone  {8}
+					<Turkey>				https://www.ipdeny.com/ipblocks/data/aggregated/tr-aggregated.zone  {8}
+					<Ukraine>				https://www.ipdeny.com/ipblocks/data/aggregated/ua-aggregated.zone  {8}"
 blocklist_ip=""
 blocklist_domain=""
 
@@ -780,7 +780,7 @@ case "$command" in
 		load_Domain
 		download_Set
 		cru d Skynet_update; minutes=$(($(date +%M) % 15))
-		cru a Skynet_update "12,27,42,57 * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "56 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
