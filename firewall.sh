@@ -67,20 +67,17 @@ blocklist_set="     <BinaryDefense>         https://iplists.firehol.org/files/bd
                     <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {1}
                     <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
                     <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
-                    <ArabEmirate>           https://www.ipdeny.com/ipblocks/data/aggregated/ae-aggregated.zone  {8}
                     <Brazil>                https://www.ipdeny.com/ipblocks/data/aggregated/br-aggregated.zone  {8}
                     <China>                 https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {8}
                     <HongKong>              https://www.ipdeny.com/ipblocks/data/aggregated/hk-aggregated.zone  {8}
                     <India>                 https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {8}
                     <Iran>                  https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {8}
-                    <Israel>                https://www.ipdeny.com/ipblocks/data/aggregated/il-aggregated.zone  {8}
                     <Japan>                 https://www.ipdeny.com/ipblocks/data/aggregated/jp-aggregated.zone  {8}
                     <NorthKorea>            https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {8}
                     <Pakistan>              https://www.ipdeny.com/ipblocks/data/aggregated/pk-aggregated.zone  {8}
                     <Russia>                https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {8}
                     <Taiwan>                https://www.ipdeny.com/ipblocks/data/aggregated/tw-aggregated.zone  {8}
                     <Thailand>              https://www.ipdeny.com/ipblocks/data/aggregated/th-aggregated.zone  {8}
-                    <Turkey>                https://www.ipdeny.com/ipblocks/data/aggregated/tr-aggregated.zone  {8}
                     <Ukraine>               https://www.ipdeny.com/ipblocks/data/aggregated/ua-aggregated.zone  {8}"
 blocklist_ip=""
 blocklist_domain=""
