@@ -747,18 +747,6 @@ case "$command" in
 		true > "$dir_skynet/warning.log"
 		true > "$dir_skynet/error.log"
 		touch "$dir_system/installtime"
-		if [ "$0" != "/jffs/scripts/firewall" ]; then
-			mv -f "$0" "/jffs/scripts/firewall"
-			log_Skynet "[!] Skynet Lite moved to /jffs/scripts/firewall"
-		fi
-		if [ ! -f "/jffs/scripts/firewall-start" ]; then
-			echo "#!/bin/sh
-			/jffs/scripts/firewall" | tr -d '\t' > "/jffs/scripts/firewall-start"
-			chmod 755 "/jffs/scripts/firewall-start"
-		elif [ -f "/jffs/scripts/firewall-start" ] && ! grep -q "/jffs/scripts/firewall" "/jffs/scripts/firewall-start"; then
-			chmod 755 "/jffs/scripts/firewall-start"
-			echo "/jffs/scripts/firewall" >> "/jffs/scripts/firewall-start"
-		fi
 		unload_IPTables
 		unload_LogIPTables
 		unload_IPSets
