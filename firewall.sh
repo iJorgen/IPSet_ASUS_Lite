@@ -60,12 +60,11 @@ blocklist_set="     <BinaryDefense>         https://iplists.firehol.org/files/bd
                     <DanMe_TOR>             https://iplists.firehol.org/files/dm_tor.ipset  {1}
                     <Dshield_7d>            https://iplists.firehol.org/files/dshield_7d.netset  {1}
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
-					<HaGeZi>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {2}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <Socks_Proxy_7d>        https://iplists.firehol.org/files/socks_proxy_7d.ipset  {1}
                     <SSL_Proxy_7d>          https://iplists.firehol.org/files/sslproxies_7d.ipset  {1}
-                    <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {1}
-                    <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {1}
+                    <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {3}
+                    <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {3}
                     <Brazil>                https://www.ipdeny.com/ipblocks/data/aggregated/br-aggregated.zone  {4}
                     <China>                 https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {4}
                     <HongKong>              https://www.ipdeny.com/ipblocks/data/aggregated/hk-aggregated.zone  {4}
