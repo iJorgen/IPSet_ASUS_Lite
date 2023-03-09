@@ -61,7 +61,6 @@ blocklist_set="     <BinaryDefense>         https://iplists.firehol.org/files/bd
                     <Dshield_7d>            https://iplists.firehol.org/files/dshield_7d.netset  {1}
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
-                    <ReSecure>				https://rescure.me/rescure_blacklist.txt  {2}
                     <Socks_Proxy_7d>        https://iplists.firehol.org/files/socks_proxy_7d.ipset  {1}
                     <SSL_Proxy_7d>          https://iplists.firehol.org/files/sslproxies_7d.ipset  {1}
                     <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {3}
