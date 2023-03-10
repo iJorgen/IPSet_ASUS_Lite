@@ -57,7 +57,9 @@ loginvalid="disabled"	# enabled | disabled
 blocklist_set="     <BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {1}
                     <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {1}
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
+                    <DanMe_TOR>             https://iplists.firehol.org/files/dm_tor.ipset  {1}
                     <Dshield_7d>            https://iplists.firehol.org/files/dshield_7d.netset  {1}
+                    <gnX_Security>			https://raw.githubusercontent.com/gnxsecurity/gnx-threat-intelligence/master/latest-blacklist.crit  {1}
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {3}
@@ -65,19 +67,7 @@ blocklist_set="     <BinaryDefense>         https://iplists.firehol.org/files/bd
                     <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {1}
                     <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
                     <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
-                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt {2}
-                    <Brazil>                https://www.ipdeny.com/ipblocks/data/aggregated/br-aggregated.zone  {4}
-                    <China>                 https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {4}
-                    <HongKong>              https://www.ipdeny.com/ipblocks/data/aggregated/hk-aggregated.zone  {4}
-                    <India>                 https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {4}
-                    <Iran>                  https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {4}
-                    <Japan>                 https://www.ipdeny.com/ipblocks/data/aggregated/jp-aggregated.zone  {4}
-                    <NorthKorea>            https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {4}
-                    <Pakistan>              https://www.ipdeny.com/ipblocks/data/aggregated/pk-aggregated.zone  {4}
-                    <Russia>                https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {4}
-                    <Taiwan>                https://www.ipdeny.com/ipblocks/data/aggregated/tw-aggregated.zone  {4}
-                    <Thailand>              https://www.ipdeny.com/ipblocks/data/aggregated/th-aggregated.zone  {4}
-                    <Ukraine>               https://www.ipdeny.com/ipblocks/data/aggregated/ua-aggregated.zone  {4}"
+                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt {2}"
 blocklist_ip=""
 blocklist_domain=""
 
