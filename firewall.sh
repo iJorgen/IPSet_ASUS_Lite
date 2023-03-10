@@ -57,18 +57,15 @@ loginvalid="disabled"	# enabled | disabled
 blocklist_set="     <BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {1}
                     <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {1}
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
-                    <DanMe_TOR>             https://iplists.firehol.org/files/dm_tor.ipset  {1}
                     <Dshield_7d>            https://iplists.firehol.org/files/dshield_7d.netset  {1}
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
-                    <Socks_Proxy_7d>        https://iplists.firehol.org/files/socks_proxy_7d.ipset  {1}
-                    <SSL_Proxy_7d>          https://iplists.firehol.org/files/sslproxies_7d.ipset  {1}
                     <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {3}
                     <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {3}
+                    <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {1}
                     <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
                     <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
                     <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt {2}
-                    <ZoneFiles>				https://zonefiles.io/f/compromised/ip/live/  {2}
                     <Brazil>                https://www.ipdeny.com/ipblocks/data/aggregated/br-aggregated.zone  {4}
                     <China>                 https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {4}
                     <HongKong>              https://www.ipdeny.com/ipblocks/data/aggregated/hk-aggregated.zone  {4}
