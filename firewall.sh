@@ -52,7 +52,7 @@
 
 filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
-loginvalid="disabled"	# enabled | disabled
+loginvalid="enabled"	# enabled | disabled
 
 blocklist_set="     <BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {1}
                     <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {1}
@@ -67,7 +67,7 @@ blocklist_set="     <BinaryDefense>         https://iplists.firehol.org/files/bd
                     <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {1}
                     <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
                     <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
-                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt {2}"
+                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {2}"
 blocklist_ip=""
 blocklist_domain=""
 
