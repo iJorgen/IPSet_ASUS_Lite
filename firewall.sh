@@ -54,7 +54,8 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
-blocklist_set="     <BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {1}
+blocklist_set="     <AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {2}
+					<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {1}
                     <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {1}
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
                     <DanMe_TOR>             https://iplists.firehol.org/files/dm_tor.ipset  {1}
@@ -62,6 +63,9 @@ blocklist_set="     <BinaryDefense>         https://iplists.firehol.org/files/bd
                     <gnX_Security>			https://raw.githubusercontent.com/gnxsecurity/gnx-threat-intelligence/master/latest-blacklist.crit  {1}
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
+                    <SW_Browser>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Browser  {1}
+                    <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {1}
+                    <SW_Hosting>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {1}
                     <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {3}
                     <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {3}
                     <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {1}
