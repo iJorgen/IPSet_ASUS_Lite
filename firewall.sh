@@ -54,11 +54,9 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
-blocklist_set="     <AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {2}
-					<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {1}
+blocklist_set="		<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {1}
                     <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {1}
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
-                    <DanMe_TOR>             https://iplists.firehol.org/files/dm_tor.ipset  {1}
                     <Dshield_7d>            https://iplists.firehol.org/files/dshield_7d.netset  {1}
                     <gnX_Security>			https://raw.githubusercontent.com/gnxsecurity/gnx-threat-intelligence/master/latest-blacklist.crit  {1}
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
