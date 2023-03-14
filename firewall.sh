@@ -54,22 +54,21 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
-blocklist_set="		<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {1}
-                    <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {1}
-                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
-                    <Dshield_7d>            https://iplists.firehol.org/files/dshield_7d.netset  {1}
-                    <gnX_Security>			https://raw.githubusercontent.com/gnxsecurity/gnx-threat-intelligence/master/latest-blacklist.crit  {1}
-                    <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
-                    <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
-                    <SW_Browser>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Browser  {1}
-                    <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {1}
-                    <SW_Hosting>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {1}
-                    <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {3}
-                    <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {3}
-                    <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {1}
-                    <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
-                    <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
-                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {2}"
+blocklist_set="		<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {8}
+                    <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {4}
+                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {8}
+                    <Dshield_7d>            https://iplists.firehol.org/files/dshield_7d.netset  {8}
+                    <gnX_Security>			https://raw.githubusercontent.com/gnxsecurity/gnx-threat-intelligence/master/latest-blacklist.crit  {2}
+                    <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {4}
+                    <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {8}
+                    <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {4}
+                    <SW_Hosting>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {4}
+                    <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {12}
+                    <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {12}
+                    <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {2}
+                    <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {8}
+                    <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {8}
+                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {8}"
 blocklist_ip=""
 blocklist_domain=""
 
@@ -649,7 +648,7 @@ option="$2"
 throttle=0
 updatecount=0
 iotblocked="disabled"
-version="3.8.2"
+version="3.8.3"
 useragent="$(curl -V | grep -Eo '^curl.+)') Skynet-Lite/$version https://github.com/wbartels/IPSet_ASUS_Lite"
 lockfile="/var/lock/skynet.lock"
 
@@ -738,6 +737,18 @@ case "$command" in
 		true > "$dir_skynet/warning.log"
 		true > "$dir_skynet/error.log"
 		touch "$dir_system/installtime"
+		if [ "$0" != "/jffs/scripts/firewall" ]; then
+			mv -f "$0" "/jffs/scripts/firewall"
+			log_Skynet "[!] Skynet Lite moved to /jffs/scripts/firewall"
+		fi
+		if [ ! -f "/jffs/scripts/firewall-start" ]; then
+			echo "#!/bin/sh
+			/jffs/scripts/firewall" | tr -d '\t' > "/jffs/scripts/firewall-start"
+			chmod 755 "/jffs/scripts/firewall-start"
+		elif [ -f "/jffs/scripts/firewall-start" ] && ! grep -q "/jffs/scripts/firewall" "/jffs/scripts/firewall-start"; then
+			chmod 755 "/jffs/scripts/firewall-start"
+			echo "/jffs/scripts/firewall" >> "/jffs/scripts/firewall-start"
+		fi
 		unload_IPTables
 		unload_LogIPTables
 		unload_IPSets
@@ -755,7 +766,7 @@ case "$command" in
 		load_Domain
 		download_Set
 		cru d Skynet_update; minutes=$(( ($(date +%M) + 14) % 15))
-		cru a Skynet_update "56 * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "12,27,42,57 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
