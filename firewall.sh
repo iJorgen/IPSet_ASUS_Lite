@@ -57,15 +57,14 @@ loginvalid="enabled"	# enabled | disabled
 blocklist_set="		<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {8}
                     <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {4}
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {8}
-                    <Dshield_7d>            https://iplists.firehol.org/files/dshield_7d.netset  {8}
-                    <gnX_Security>			https://raw.githubusercontent.com/gnxsecurity/gnx-threat-intelligence/master/latest-blacklist.crit  {2}
+                    <gnX_Security>			https://raw.githubusercontent.com/gnxsecurity/gnx-threat-intelligence/master/latest-blacklist.crit  {4}
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {4}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {8}
                     <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {4}
                     <SW_Hosting>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {4}
                     <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {12}
                     <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {12}
-                    <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {2}
+                    <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {4}
                     <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {8}
                     <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {8}
                     <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {8}"
