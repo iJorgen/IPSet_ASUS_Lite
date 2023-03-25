@@ -16,7 +16,7 @@
 #
 #
 # Installation:
-# curl https://raw.githubusercontent.com/wbartels/IPSet_ASUS_Lite/master/firewall.sh --output /jffs/scripts/firewall && chmod 755 /jffs/scripts/firewall && /jffs/scripts/firewall
+# curl https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/firewall.sh --output /jffs/scripts/firewall && chmod 755 /jffs/scripts/firewall && /jffs/scripts/firewall
 #
 # Commands:
 # firewall help
@@ -54,18 +54,18 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
-blocklist_set="		<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {8}
-                    <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {4}
-                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {8}
-                    <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {4}
-                    <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {8}
-                    <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {4}
-                    <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {12}
-                    <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {12}
-                    <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {4}
-                    <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {8}
-                    <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {8}
-                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {4}"
+blocklist_set="		<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {2}
+                    <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {1}
+                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
+                    <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
+                    <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
+                    <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {1}
+                    <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {3}
+                    <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {3}
+                    <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {1}
+                    <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
+                    <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
+                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {1}"
 blocklist_ip=""
 blocklist_domain=""
 
@@ -426,7 +426,7 @@ load_Passlist() {
 		raw.githubusercontent.com
 		www.internic.net"
 
-	if [ $((updatecount % 96)) -ne 0 ] && hash_Unmodified "$passlist_router $passlist_ip $passlist_domain" "passlist"; then return; fi
+	if [ $((updatecount % 24)) -ne 0 ] && hash_Unmodified "$passlist_router $passlist_ip $passlist_domain" "passlist"; then return; fi
 	log_Skynet "[i] Update $(lookup_Comment 'Skynet-Passlist')"
 	local cache= curl_exit= domain= etag= etag_temp= n=0 response_code= temp= url=
 	ipset -q destroy "Skynet-Temp"
@@ -763,7 +763,7 @@ case "$command" in
 		load_Domain
 		download_Set
 		cru d Skynet_update; minutes=$(( ($(date +%M) + 14) % 15))
-		cru a Skynet_update "12,27,42,57 * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "56 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
