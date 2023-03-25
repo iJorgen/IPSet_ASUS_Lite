@@ -60,7 +60,6 @@ blocklist_set="		<BinaryDefense>         https://iplists.firehol.org/files/bds_a
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {4}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {8}
                     <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {4}
-                    <SW_Hosting>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {4}
                     <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {12}
                     <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {12}
                     <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {4}
