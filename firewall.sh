@@ -763,7 +763,7 @@ case "$command" in
 		load_Domain
 		download_Set
 		cru d Skynet_update; minutes=$(( ($(date +%M) + 14) % 15))
-		cru a Skynet_update "56 * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "25 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
