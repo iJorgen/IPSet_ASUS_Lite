@@ -54,14 +54,14 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
-blocklist_set="		<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {2}
-                    <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {1}
+blocklist_set="		<BinaryDefense>         https://www.binarydefense.com/banlist.txt  {2}
+                    <CIArmy>                https://cinsscore.com/list/ci-badguys.txt  {1}
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
-                    <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
+                    <GreenSnow>             https://blocklist.greensnow.co/greensnow.txt  {1}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {1}
-                    <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {3}
-                    <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {3}
+                    <Spamhaus_drop>         https://www.spamhaus.org/drop/drop.txt  {3}
+                    <Spamhaus_edrop>        https://www.spamhaus.org/drop/edrop.txt  {3}
                     <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {1}
                     <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
                     <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
@@ -763,7 +763,7 @@ case "$command" in
 		load_Domain
 		download_Set
 		cru d Skynet_update; minutes=$(( ($(date +%M) + 14) % 15))
-		cru a Skynet_update "24 * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "14 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
