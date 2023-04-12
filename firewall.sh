@@ -54,7 +54,8 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
-blocklist_set="		<BinaryDefense>         https://www.binarydefense.com/banlist.txt  {2}
+blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {2}
+					<BinaryDefense>         https://www.binarydefense.com/banlist.txt  {2}
                     <CIArmy>                https://cinsscore.com/list/ci-badguys.txt  {1}
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
                     <GreenSnow>             https://blocklist.greensnow.co/greensnow.txt  {1}
@@ -65,7 +66,7 @@ blocklist_set="		<BinaryDefense>         https://www.binarydefense.com/banlist.t
                     <ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {1}
                     <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
                     <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
-                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {1}"
+                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {2}"
 blocklist_ip=""
 blocklist_domain=""
 
