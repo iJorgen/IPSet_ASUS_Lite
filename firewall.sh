@@ -55,16 +55,17 @@ logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
 blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {1}
-					<BinaryDefense>         https://www.binarydefense.com/banlist.txt  {2}
-                    <CIArmy>                https://cinsscore.com/list/ci-badguys.txt  {1}
+					<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {2}
+                    <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {1}
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
+                    <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {1}
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
-                    <GreenSnow>             https://blocklist.greensnow.co/greensnow.txt  {1}
+                    <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {1}
 					<SW_Hosting>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {1}
-                    <Spamhaus_drop>         https://www.spamhaus.org/drop/drop.txt  {3}
-                    <Spamhaus_edrop>        https://www.spamhaus.org/drop/edrop.txt  {3}
+                    <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
+                    <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
                     <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
                     <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
                     <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {1}"
