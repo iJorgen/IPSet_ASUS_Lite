@@ -58,7 +58,8 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
 					<BinaryDefense>         https://www.binarydefense.com/banlist.txt  {2}
                     <CIArmy>                https://cinsscore.com/list/ci-badguys.txt  {1}
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
-                    <GreenSnow>             https://blocklist.greensnow.co/greensnow.txt  {1}
+                    <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
+					<GreenSnow>             https://blocklist.greensnow.co/greensnow.txt  {1}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {1}
                     <Spamhaus_drop>         https://www.spamhaus.org/drop/drop.txt  {3}
