@@ -57,7 +57,7 @@ loginvalid="enabled"	# enabled | disabled
 blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {1}
 					<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {2}
                     <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {1}
-                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
+                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {3}
                     <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {1}
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
@@ -66,9 +66,9 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
 					<SW_Hosting>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {1}
                     <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
                     <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
-                    <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
-                    <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
-                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {1}"
+                    <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {3}
+                    <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {3}
+                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {2}"
 blocklist_ip=""
 blocklist_domain=""
 
@@ -84,6 +84,11 @@ passlist_ip="       45.90.28.0
                     178.255.154.59
                     193.9.112.136
                     94.140.14.49
+                    188.114.96.1
+                    188.114.97.1
+                    104.21.10.13
+                    172.67.162.27
+                    149.248.217.117
                     104.26.2.137
                     104.26.3.137
                     172.67.69.149
