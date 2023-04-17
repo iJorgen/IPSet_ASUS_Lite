@@ -56,28 +56,28 @@ loginvalid="enabled"	# enabled | disabled
 
 blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {1}
 					<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {2}
+                    <Brazil>				https://www.ipdeny.com/ipblocks/data/aggregated/br-aggregated.zone  {4}
+                    <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {4}
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
+                    <Cuba>					https://www.ipdeny.com/ipblocks/data/aggregated/cu-aggregated.zone  {4}
                     <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {1}
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
-                    <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {1}
-					<SW_Hosting>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {1}
-                    <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
-                    <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
-                    <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
-                    <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
-                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {2}
-                    <Brazil>				https://www.ipdeny.com/ipblocks/data/aggregated/br-aggregated.zone  {4}
-                    <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {4}
-                    <Cuba>					https://www.ipdeny.com/ipblocks/data/aggregated/cu-aggregated.zone  {4}
                     <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {4}
                     <Nigeria>				https://www.ipdeny.com/ipblocks/data/aggregated/ng-aggregated.zone  {4}
                     <NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {4}
                     <Romania>				https://www.ipdeny.com/ipblocks/data/aggregated/ro-aggregated.zone  {4}
                     <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {4}
+                    <Shadow_Hackers>		https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {1}
+					<Shadow_Hosting>		https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {1}
+                    <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
+                    <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
                     <Syria>					https://www.ipdeny.com/ipblocks/data/aggregated/sy-aggregated.zone  {4}
-                    <Ukraine>				https://www.ipdeny.com/ipblocks/data/aggregated/ua-aggregated.zone  {4}"
+                    <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
+                    <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
+                    <Ukraine>				https://www.ipdeny.com/ipblocks/data/aggregated/ua-aggregated.zone  {4}
+                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {2}"
 blocklist_ip=""
 blocklist_domain=""
 
