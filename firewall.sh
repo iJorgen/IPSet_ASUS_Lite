@@ -57,7 +57,7 @@ loginvalid="enabled"	# enabled | disabled
 blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {1}
 					<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {2}
                     <CIArmy>                https://iplists.firehol.org/files/ciarmy.ipset  {1}
-                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {3}
+                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
                     <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {1}
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
@@ -66,8 +66,8 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
 					<SW_Hosting>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {1}
                     <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
                     <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
-                    <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {3}
-                    <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {3}
+                    <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
+                    <ThreatView_HiConf>     https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
                     <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {2}"
 blocklist_ip=""
 blocklist_domain=""
@@ -771,7 +771,7 @@ case "$command" in
 		load_Domain
 		download_Set
 		cru d Skynet_update; minutes=$(( ($(date +%M) + 14) % 15))
-		cru a Skynet_update "12 * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "19 * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
