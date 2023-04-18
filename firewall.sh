@@ -58,11 +58,12 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
 					<BinaryDefense>         https://iplists.firehol.org/files/bds_atif.ipset  {2}
                     <Brazil>				https://www.ipdeny.com/ipblocks/data/aggregated/br-aggregated.zone  {4}
                     <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {4}
+					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {2}
-                    <Cuba>					https://www.ipdeny.com/ipblocks/data/aggregated/cu-aggregated.zone  {4}
                     <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {1}
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
+                    <India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {4}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {4}
                     <Nigeria>				https://www.ipdeny.com/ipblocks/data/aggregated/ng-aggregated.zone  {4}
