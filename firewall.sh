@@ -65,7 +65,6 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {4}
                     <NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {4}
-                    <Romania>				https://www.ipdeny.com/ipblocks/data/aggregated/ro-aggregated.zone  {4}
                     <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {4}
                     <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {3}
                     <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {3}
