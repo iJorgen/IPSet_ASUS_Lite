@@ -62,8 +62,6 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
                     <GreenSnow>             https://iplists.firehol.org/files/greensnow.ipset  {1}
                     <IPSum_Level2>          https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
-                    <Shadow_Hackers>		https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {1}
-					<Shadow_Hosting>		https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {1}
                     <Spamhaus_drop>         https://iplists.firehol.org/files/spamhaus_drop.netset  {4}
                     <Spamhaus_edrop>        https://iplists.firehol.org/files/spamhaus_edrop.netset  {4}
                     <ThreatView_OSINT>      https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
