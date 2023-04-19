@@ -34,7 +34,6 @@ loginvalid="enabled"	# enabled | disabled
 
 blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {1}
 					<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {2}
-                    <BotnetC2>				https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.txt  {1}
                     <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {4}
 					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {1}
                     <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {2}
