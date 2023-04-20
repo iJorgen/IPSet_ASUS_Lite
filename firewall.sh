@@ -43,15 +43,12 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
                     <GreenSnow>				https://iplists.firehol.org/files/greensnow.ipset  {1}
                     <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {6}
-                    <Israel>				https://www.ipdeny.com/ipblocks/data/aggregated/il-aggregated.zone  {6}
                     <NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {6}
                     <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {6}
-                    <Romania>				https://www.ipdeny.com/ipblocks/data/aggregated/ro-aggregated.zone  {6}
                     <Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {3}
                     <Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {3}
                     <ThreatView_OSINT>		https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
                     <ThreatView_HiConf>		https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
-                    <Turkey>				https://www.ipdeny.com/ipblocks/data/aggregated/tr-aggregated.zone  {6}
                     <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {2}"
 blocklist_ip=""
 blocklist_domain=""
