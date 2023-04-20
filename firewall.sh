@@ -39,7 +39,7 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
                     <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {2}
                     <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {1}
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
-                    <EmergingThreats>		https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {1}
+                    <EmergingThreats>		https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {2}
                     <GreenSnow>				https://blocklist.greensnow.co/greensnow.txt  {1}
                     <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {4}
