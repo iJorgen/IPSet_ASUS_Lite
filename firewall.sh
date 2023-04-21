@@ -34,6 +34,7 @@ loginvalid="enabled"	# enabled | disabled
 
 blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {1}
 					<BinaryDefense>			https://iplists.firehol.org/files/bds_atif.ipset  {2}
+                    <C2IntelFeeds>			https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s.csv  {2}
                     <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {6}
 					<CIArmy>				https://iplists.firehol.org/files/ciarmy.ipset  {1}
                     <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {2}
@@ -47,6 +48,9 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
                     <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {6}
                     <Spamhaus_drop>			https://iplists.firehol.org/files/spamhaus_drop.netset  {3}
                     <Spamhaus_edrop>		https://iplists.firehol.org/files/spamhaus_edrop.netset  {3}
+                    <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {2}
+                    <SW_MalwareHosts>		https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {2}
+                    <SW_Scanners>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {2}
                     <ThreatView_OSINT>		https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {2}
                     <ThreatView_HiConf>		https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {2}
                     <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {2}"
