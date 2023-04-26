@@ -50,7 +50,7 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
                     <Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {6}
                     <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {1}
                     <SW_MalwareHosts>		https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {1}
-                    <ThreatView_HiConf>		https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {4}
+                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {4}
                     <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {2}"
 blocklist_ip=""
 blocklist_domain=""
