@@ -37,7 +37,7 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
                     <C2IntelFeeds>			https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s.csv  {2}
                     <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {8}
 					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {1}
-                    <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
+                    <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {3}
                     <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {2}
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
                     <EmergingThreats>		https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {3}
@@ -51,7 +51,7 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
                     <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {1}
                     <SW_MalwareHosts>		https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {3}
                     <ThreatView_HiConf>		https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {3}
-                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {4}"
+                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {3}"
 blocklist_ip=""
 blocklist_domain=""
 
