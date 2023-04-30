@@ -32,15 +32,15 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
-blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {2}
-                    <BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4}
+blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {1}
+                    <BinaryDefense>			https://www.binarydefense.com/banlist.txt  {3}
                     <C2IntelFeeds>			https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s.csv  {2}
                     <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {8}
-					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {2}
-                    <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {3}
-                    <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {1}
-                    <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {1}
-                    <EmergingThreats>		https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {4}
+					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {1}
+                    <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
+                    <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {2}
+                    <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
+                    <EmergingThreats>		https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {3}
                     <GreenSnow>				https://blocklist.greensnow.co/greensnow.txt  {1}
                     <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {8}
