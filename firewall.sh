@@ -116,11 +116,11 @@ load_IPTables() {
 
 
 unload_LogIPTables() {
-	iptables -t raw -D PREROUTING -i "$iface" -m set ! --match-set Skynet-Passlist src -m set --match-set Skynet-Master src -j LOG --log-prefix "[IN] " 2>/dev/null
-	iptables -t raw -D PREROUTING -i br+ -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Master dst -j LOG --log-prefix "[OUT] " 2>/dev/null
-	iptables -t raw -D OUTPUT -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Master dst -j LOG --log-prefix "[OUT] " 2>/dev/null
-	iptables -D logdrop -m state --state NEW -j LOG --log-prefix "[INVALID] " 2>/dev/null
-	iptables -D FORWARD -i br+ -m set --match-set Skynet-IOT src ! -o tun2+ -j LOG --log-prefix "[IOT] " 2>/dev/null
+	iptables -t raw -D PREROUTING -i "$iface" -m set ! --match-set Skynet-Passlist src -m set --match-set Skynet-Master src -j LOG 2>/dev/null
+	iptables -t raw -D PREROUTING -i br+ -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Master dst -j LOG 2>/dev/null
+	iptables -t raw -D OUTPUT -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Master dst -j LOG 2>/dev/null
+	iptables -D logdrop -m state --state NEW -j LOG 2>/dev/null
+	iptables -D FORWARD -i br+ -m set --match-set Skynet-IOT src ! -o tun2+ -j LOG 2>/dev/null
 }
 
 
@@ -129,20 +129,20 @@ load_LogIPTables() {
 	if [ "$logmode" = "enabled" ]; then
 		if [ "$filtertraffic" = "all" ] || [ "$filtertraffic" = "inbound" ]; then
 			pos2="$(iptables --line -nL PREROUTING -t raw | grep -F "Skynet-Master src" | grep -F "DROP" | awk '{print $1}')"
-			iptables -t raw -I PREROUTING "$pos2" -i "$iface" -m set ! --match-set Skynet-Passlist src -m set --match-set Skynet-Master src -j LOG --log-prefix "[IN] " 2>/dev/null
+			iptables -t raw -I PREROUTING "$pos2" -i "$iface" -m set ! --match-set Skynet-Passlist src -m set --match-set Skynet-Master src -j LOG 2>/dev/null
 		fi
 		if [ "$filtertraffic" = "all" ] || [ "$filtertraffic" = "outbound" ]; then
 			pos3="$(iptables --line -nL PREROUTING -t raw | grep -F "Skynet-Master dst" | grep -F "DROP" | awk '{print $1}')"
-			iptables -t raw -I PREROUTING "$pos3" -i br+ -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Master dst -j LOG --log-prefix "[OUT] " 2>/dev/null
+			iptables -t raw -I PREROUTING "$pos3" -i br+ -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Master dst -j LOG 2>/dev/null
 			pos4="$(iptables --line -nL OUTPUT -t raw | grep -F "Skynet-Master dst" | grep -F "DROP" | awk '{print $1}')"
-			iptables -t raw -I OUTPUT "$pos4" -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Master dst -j LOG --log-prefix "[OUT] " 2>/dev/null
+			iptables -t raw -I OUTPUT "$pos4" -m set ! --match-set Skynet-Passlist dst -m set --match-set Skynet-Master dst -j LOG 2>/dev/null
 		fi
 		if [ "$(nvram get fw_log_x)" = "drop" ] || [ "$(nvram get fw_log_x)" = "both" ] && [ "$loginvalid" = "enabled" ]; then
-			iptables -I logdrop -m state --state NEW -j LOG --log-prefix "[INVALID] " 2>/dev/null
+			iptables -I logdrop -m state --state NEW -j LOG 2>/dev/null
 		fi
 		if [ "$iotblocked" = "enabled" ]; then
 			pos5="$(iptables --line -nL FORWARD | grep -F "Skynet-IOT" | grep -F "DROP" | awk '{print $1}')"
-			iptables -I FORWARD "$pos5" -i br+ -m set --match-set Skynet-IOT src ! -o tun2+ -j LOG --log-prefix "[IOT] " 2>/dev/null
+			iptables -I FORWARD "$pos5" -i br+ -m set --match-set Skynet-IOT src ! -o tun2+ -j LOG 2>/dev/null
 		fi
 	fi
 }
