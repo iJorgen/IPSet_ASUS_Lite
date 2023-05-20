@@ -40,7 +40,6 @@ blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4
                     <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {2}
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
                     <ET_Block>				https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {4}
-                    <ET_Compromised>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
                     <GreenSnow>				https://blocklist.greensnow.co/greensnow.txt  {2}
                     <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {8}
