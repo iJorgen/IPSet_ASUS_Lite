@@ -39,7 +39,8 @@ blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4
                     <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
                     <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {2}
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
-                    <EmergingThreats>		https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {4}
+                    <ET_Block>				https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {4}
+                    <ET_Compromised>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
                     <GreenSnow>				https://blocklist.greensnow.co/greensnow.txt  {2}
                     <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {8}
@@ -50,7 +51,7 @@ blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4
                     <Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {6}
                     <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {2}
                     <SW_MalwareHosts>		https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {4}
-                    <ThreatView_HiConf>		https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {4}
+                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {4}
                     <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {4}"
 blocklist_ip=""
 blocklist_domain=""
