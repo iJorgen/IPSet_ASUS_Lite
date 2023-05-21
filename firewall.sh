@@ -46,8 +46,11 @@ blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4
                     <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {8}
                     <NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {8}
                     <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {8}
+                    <Socks4_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {2}
+                    <Socks5_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {2}
                     <Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {6}
                     <Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {6}
+                    <SSL_Proxy>				https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {2}
                     <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {2}
                     <SW_MalwareHosts>		https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {4}
                     <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {4}
