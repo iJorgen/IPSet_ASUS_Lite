@@ -33,13 +33,15 @@ logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
 blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4}
-                    <C2IntelFeeds>			https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s.csv  {2}
+                    <C2Intel>				https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv  {2}
+                    <C2Intel_unv>			https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/unverified/IPC2s.csv  {2}
                     <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {8}
 					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {2}
                     <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
                     <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {2}
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
                     <ET_Block>				https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {4}
+                    <ET_Comprimised>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
                     <GreenSnow>				https://blocklist.greensnow.co/greensnow.txt  {2}
                     <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {8}
