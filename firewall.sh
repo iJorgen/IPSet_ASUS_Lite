@@ -33,30 +33,35 @@ logmode="enabled"		# enabled | disabled
 loginvalid="enabled"	# enabled | disabled
 
 blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4}
-                    <C2Intel>				https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv  {2}
-                    <C2Intel_unv>			https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/unverified/IPC2s.csv  {2}
+                    <C2Intel>				https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s.csv  {2}
+                    <C2Intel_unv>			https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/unverified/IPC2s.csv  {4}
                     <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {8}
-					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {2}
+					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {1}
                     <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
                     <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {2}
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
                     <ET_Block>				https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {4}
-                    <ET_Comprimised>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
-                    <GreenSnow>				https://blocklist.greensnow.co/greensnow.txt  {2}
+                    <ET_Compromised>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
+                    <GreenSnow>				https://blocklist.greensnow.co/greensnow.txt  {1}
                     <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {8}
                     <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {8}
+                    <Israel>				https://www.ipdeny.com/ipblocks/data/aggregated/il-aggregated.zone  {8}
                     <NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {8}
+                    <Pakistan>				https://www.ipdeny.com/ipblocks/data/aggregated/pk-aggregated.zone  {8}
                     <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {8}
+                    <SaudiArabia>			https://www.ipdeny.com/ipblocks/data/aggregated/sa-aggregated.zone  {8}
                     <Socks4_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {2}
                     <Socks5_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {2}
+                    <SouthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {8}
                     <Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {6}
                     <Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {6}
                     <SSL_Proxy>				https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {2}
                     <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {2}
                     <SW_MalwareHosts>		https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {4}
                     <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {4}
-                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {4}"
+                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {4}
+                    <Vietnam>				https://www.ipdeny.com/ipblocks/data/aggregated/vn-aggregated.zone  {8}"
 blocklist_ip=""
 blocklist_domain=""
 
