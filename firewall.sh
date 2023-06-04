@@ -46,6 +46,7 @@ blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4
                     <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {8}
                     <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {8}
+					<LittleJake>			https://raw.githubusercontent.com/LittleJake/ip-blacklist/main/all_blacklist.txt  {2}
                     <NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {8}
                     <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {8}
                     <Socks4_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {2}
