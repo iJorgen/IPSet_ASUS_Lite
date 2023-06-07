@@ -21,6 +21,28 @@
 # Commands:
 # firewall help
 #
+# Readme:
+# The cron job is started every 15 minutes.
+# By default, the set update process is started after 4 cycles = 1 hour.
+# This value can be overridden per set with the {n} tag.
+# If supported only changed files will be downloaded, see URL's below for more info.
+# This way the update check frequencies can be relative high without overloading the servers.
+#
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Modified-Since
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304
+#
+# If a download fails, this set will be retried at an interval of 15 minutes.
+# Over time, the interval will be extended to a maximum of 6 hours.
+#
+# Both the <comment> and {n} tags are optional.
+# The order of the URL and tags are not important, but must be on the same line.
+#
+# The other lists (ip and domain) can contain multiple items per list.
+# The items on these lists must be separated with a space, tab or newline.
+# blocklist_ip, blocklist_domain and passlist_ip can optionally use one <comment> tag per list.
+#
+
 
 
 ###################
@@ -30,7 +52,7 @@
 
 filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
-loginvalid="enabled"	# enabled | disabled
+loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4}
                     <C2Intel>				https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv  {2}
@@ -46,7 +68,7 @@ blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4
                     <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
                     <India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {8}
                     <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {8}
-					<LittleJake>			https://raw.githubusercontent.com/LittleJake/ip-blacklist/main/all_blacklist.txt  {2}
+                    <LittleJake>			https://raw.githubusercontent.com/LittleJake/ip-blacklist/main/all_blacklist.txt  {2}
                     <NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {8}
                     <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {8}
                     <Socks4_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {2}
@@ -55,6 +77,8 @@ blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4
                     <Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {6}
                     <Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {6}
                     <SSL_Proxy>				https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {2}
+                    <SW_Hackers>			https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {2}
+                    <SW_MalwareHosts>		https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hosting  {4}
                     <ThreatView_HC>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {4}
                     <ThreatView_Exp>		https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {4}
                     <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {4}"
@@ -196,6 +220,12 @@ filter_IP_CIDR() {
 }
 
 
+filter_set_IP_CIDR() {
+	sed -e "s/^ExitAddress //" |
+	grep -Eo '^(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])){3}(/(3[0-2]|[1-2][0-9]|[0-9]))?'
+}
+
+
 filter_Out_PrivateIP() {
 	# https://regex101.com/r/vDjcX3/1
 	grep -Ev '^(0\.|10\.|100\.(6[4-9]|[7-9][0-9]|1[0-1][0-9]|12[0-7])\.|127\.|169\.254\.|172\.1[6-9]\.|172\.2[0-9]\.|172\.3[0-1]\.|192\.0\.0\.|192\.0\.2\.|192\.168\.|198\.1[8-9]\.|198\.51\.100\.|203\.0\.113\.|2(2[4-9]|[3-4][0-9]|5[0-5])\.)'
@@ -278,16 +308,14 @@ download_Error() {
 log_Skynet() {
 	logger -t skynet "$1"
 	echo " $1" >&2
-	local type="$(echo "$1" | cut -c1-3)"
-	if [ "$type" = "[!]" ]; then echo "$(date '+%b %d %T') | $(echo "$1" | cut -c5-)" >> "$dir_skynet/warning.log"; fi
-	if [ "$type" = "[*]" ]; then echo "$(date '+%b %d %T') | $(echo "$1" | cut -c5-)" >> "$dir_skynet/error.log"; fi
+	echo "$(date '+%b %d %T') $1" >> "$dir_skynet/debug.log"
 }
 
 
 log_Tail() {
 	touch "$1"
-	if [ $(wc -l < "$1") -ge 725 ]; then
-		tail -675 "$1" > "$dir_temp/log" && mv -f "$dir_temp/log" "$1"
+	if [ $(wc -l < "$1") -ge 1524 ]; then
+		tail -1500 "$1" > "$dir_temp/log" && mv -f "$dir_temp/log" "$1"
 	fi
 }
 
@@ -423,7 +451,7 @@ load_Passlist() {
 		raw.githubusercontent.com
 		www.internic.net"
 
-	if [ $((updatecount % 24)) -ne 0 ] && hash_Unmodified "$passlist_router $passlist_ip $passlist_domain" "passlist"; then return; fi
+	if [ $((updatecount % 96)) -ne 0 ] && hash_Unmodified "$passlist_router $passlist_ip $passlist_domain" "passlist"; then return; fi
 	log_Skynet "[i] Update $(lookup_Comment 'Skynet-Passlist')"
 	local cache= curl_exit= domain= etag= etag_temp= n=0 response_code= temp= url=
 	ipset -q destroy "Skynet-Temp"
@@ -499,8 +527,8 @@ load_Domain() {
 
 
 load_Set() {
-	grep -E '^[+][0-9]' < "$dir_temp/diff" | cut -c2- > "$dir_temp/add"
-	grep -E '^[-][0-9]' < "$dir_temp/diff" | cut -c2- > "$dir_temp/del"
+	grep -E '^[+][1-9]' < "$dir_temp/diff" | cut -c2- > "$dir_temp/add"
+	grep -E '^[-][1-9]' < "$dir_temp/diff" | cut -c2- > "$dir_temp/del"
 	awk -v setname="$setname" -v comment="$comment" '{printf "add %s %s comment \"Blocklist: %s\"\n", setname, $1, comment}' "$dir_temp/add" | ipset restore -!
 	awk -v setname="$setname" '{printf "del %s %s\n", setname, $1}' "$dir_temp/del" | ipset restore -!
 	printf '%s | %6s | %7s | %7s |\n' \
@@ -516,17 +544,19 @@ load_Set() {
 
 compare_Set() {
 	echo " [i] Compare $comment"
-	if cmp -s "$cache" "$temp"; then
-		printf '\033[1A\033[K' # cursor up and clear
-		return 0
-	fi
 	if [ ! -f "$filtered_cache" ]; then
 		touch "$filtered_cache"
 	fi
-	{ unzip -p "$temp" 2>/dev/null || gunzip -c "$temp" 2>/dev/null || cat "$temp"; } | filter_IP_CIDR | filter_Out_PrivateIP | sort -u > "$filtered_temp"
-	diff "$filtered_cache" "$filtered_temp" > "$dir_temp/diff"; local diff_exit=$?
+	{ unzip -p "$temp" 2>/dev/null || gunzip -c "$temp" 2>/dev/null || cat "$temp"; } | filter_set_IP_CIDR | filter_Out_PrivateIP | sort -u > "$filtered_temp"
+	if [ "$url" = 'https://feeds.dshield.org/block.txt' ]; then
+		local swap_file="$dir_temp/swap_file"
+		awk '{print $0"/24"}' "$filtered_temp" > "$swap_file"
+		mv -f "$swap_file" "$filtered_temp"
+	fi
+	diff "$filtered_cache" "$filtered_temp" | grep -E '^[+-][1-9]' > "$dir_temp/diff"
 	printf '\033[1A\033[K' # cursor up and clear
-	return $diff_exit
+	if [ -s "$dir_temp/diff" ]; then return 1; fi
+	return 0
 }
 
 
@@ -579,8 +609,11 @@ download_Set() {
 			if [ "$response_code" = "304" ]; then
 				log_Skynet "[i] Fresh $comment"
 			elif compare_Set && [ -s "$cache" ]; then
-				log_Skynet "[!] Redownload $comment"
-			elif [ $(wc -l < "$filtered_temp") -eq 0 ]; then
+				log_Skynet "[!] Identical $comment"
+				mv -f "$temp" "$cache"
+				mv -f "$filtered_temp" "$filtered_cache"
+				mv -f "$etag_temp" "$etag"
+			elif [ ! -s "$filtered_temp" ]; then
 				log_Skynet "[!] Ignore update $comment (zero entries)"
 			else
 				log_Skynet "[i] Update $comment"
@@ -642,7 +675,7 @@ option="$2"
 throttle=0
 updatecount=0
 iotblocked="disabled"
-version="3.8.3"
+version="3.8.4"
 useragent="$(curl -V | grep -Eo '^curl.+)') Skynet-Lite/$version https://github.com/wbartels/IPSet_ASUS_Lite"
 lockfile="/var/lock/skynet.lock"
 
@@ -728,8 +761,7 @@ case "$command" in
 		log_Skynet "[i] Install"
 		rm -f "$dir_cache/"* "$dir_debug/"* "$dir_etag/"* "$dir_filtered/"*
 		rm -f "$dir_reload/"* "$dir_system/"* "$dir_temp/"* "$dir_update/"*
-		true > "$dir_skynet/warning.log"
-		true > "$dir_skynet/error.log"
+		true > "$dir_skynet/debug.log"
 		touch "$dir_system/installtime"
 		if [ "$0" != "/jffs/scripts/firewall" ]; then
 			mv -f "$0" "/jffs/scripts/firewall"
@@ -828,25 +860,32 @@ case "$command" in
 	;;
 
 
-	warning)
-		header
-		if [ -f "$dir_skynet/warning.log" ] && [ $(wc -l < "$dir_skynet/warning.log") -ge 1 ]; then
-			cat "$dir_skynet/warning.log"
+	debug)
+		header "Debug log"
+		if [ -s "$dir_skynet/debug.log" ]; then
+			cat "$dir_skynet/debug.log" | awk '{print " " $0}'
 		else
-			echo " [i] Empty warning.log"
+			echo " [i] Empty"
 		fi
-		footer "empty"
+		footer
+	;;
+
+
+	warning)
+		header "Warning log"
+		if ! cat "$dir_skynet/debug.log" | awk '{print " " $0}' | grep -E '[!]'; then
+			echo " [i] Empty"
+		fi
+		footer
 	;;
 
 
 	error)
-		header
-		if [ -f "$dir_skynet/error.log" ] && [ $(wc -l < "$dir_skynet/error.log") -ge 1 ]; then
-			cat "$dir_skynet/error.log"
-		else
-			echo " [i] Empty error.log"
+		header "Error log"
+		if ! cat "$dir_skynet/debug.log" | awk '{print " " $0}' | grep -E '[*]'; then
+			echo " [i] Empty"
 		fi
-		footer "empty"
+		footer
 	;;
 
 
@@ -898,6 +937,7 @@ case "$command" in
 		echo " firewall fresh"
 		echo " firewall frequency"
 		echo " firewall entries"
+		echo " firewall debug"
 		echo " firewall warning"
 		echo " firewall error"
 		echo " firewall update"
@@ -921,5 +961,4 @@ esac
 
 
 rm -f "$dir_temp/"*
-log_Tail "$dir_skynet/warning.log"
-log_Tail "$dir_skynet/error.log"
+log_Tail "$dir_skynet/debug.log"
