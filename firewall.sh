@@ -52,7 +52,7 @@
 
 filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
-loginvalid="disabled"	# enabled | disabled
+loginvalid="enabled"	# enabled | disabled
 
 blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4}
                     <C2Intel>				https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv  {2}
