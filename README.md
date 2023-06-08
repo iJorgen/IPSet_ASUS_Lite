@@ -6,7 +6,9 @@ Skynet Lite relies on the IPTables from Skynet by Adamm.
 ## Key features
 - Small one file shell script, no need for an external USB drive.
 - Additional Threat Intelligence Sources added.
-- Block top hacking countries.
+- Block TOR
+- Block Proxies (SSL, Socks4, Socks5)
+- Block top hacking countries (Russia, China, India, N Korea, S Korea, Iran)
 - Support for plain text gzip transfer-encoding.
 - Only download and update changed blocklist sets.
 - Use incremental update for all blocklist sets.
@@ -21,7 +23,7 @@ Administration > System > Enable JFFS custom scripts and configs: Yes > Apply
 Type the following line in your favorite SSH Client:
 
 ```Shell
-curl https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/firewall.sh --output /jffs/scripts/firewall && chmod 755 /jffs/scripts/firewall && /jffs/scripts/firewall
+curl https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/firewall.sh --output /jffs/scripts/firewall && chmod 755 /jffs/scripts/firewall && /jffs/scripts/firewall reset
 ```
 
 ## Uninstall
@@ -41,6 +43,7 @@ firewall dns.google
 firewall fresh
 firewall frequency
 firewall entries
+firewall debug
 firewall warning
 firewall error
 firewall update
