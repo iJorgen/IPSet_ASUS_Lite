@@ -78,8 +78,7 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
                     <Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {6}
                     <SSL_Proxy>				https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {2}
                     <ThreatView_HC>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {4}
-                    <ThreatView_Exp>		https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {4}
-                    <USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {4}"
+                    <ThreatView_Exp>		https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {4}"
 blocklist_ip=""
 blocklist_domain=""
 
