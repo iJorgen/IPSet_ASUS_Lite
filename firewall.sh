@@ -61,7 +61,6 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
                     <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {8}
 					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {2}
                     <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
-                    <CyberCrime>			https://iplists.firehol.org/files/cybercrime.ipset  {2}
                     <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
                     <ET_Block>				https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {4}
                     <ET_Compromised>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
@@ -77,8 +76,7 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
                     <Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {6}
                     <Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {6}
                     <SSL_Proxy>				https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {2}
-                    <ThreatView_HC>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {4}
-                    <ThreatView_Exp>		https://threatview.io/Downloads/Experimental-IOC-Tweets.txt  {4}"
+                    <ThreatView_HC>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {4}"
 blocklist_ip=""
 blocklist_domain=""
 
