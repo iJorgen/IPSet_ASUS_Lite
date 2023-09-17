@@ -16,7 +16,7 @@
 #
 #
 # Installation:
-# curl https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/firewall.sh --output /jffs/scripts/firewall && chmod 755 /jffs/scripts/firewall && /jffs/scripts/firewall
+# curl https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/firewall.sh --output /jffs/scripts/firewall && chmod 755 /jffs/scripts/firewall && /jffs/scripts/firewall reset
 #
 # Commands:
 # firewall help
@@ -52,38 +52,38 @@
 
 filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
-loginvalid="enabled"	# enabled | disabled
+loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {2}
-					<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {4}
-                    <C2Intel>				https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv  {2}
-                    <C2Intel_unv>			https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/unverified/IPC2s.csv  {4}
-                    <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {8}
-					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {2}
-                    <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {4}
-                    <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {2}
-                    <ET_Block>				https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {4}
-                    <ET_Compromised>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {4}
-                    <GreenSnow>				https://blocklist.greensnow.co/greensnow.txt  {2}
-                    <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {2}
-                    <India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {8}
-                    <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {8}
-                    <NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {8}
-                    <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {8}
-                    <Socks4_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {2}
-                    <Socks5_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {2}
-                    <SouthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {8}
-                    <Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {6}
-                    <Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {6}
-                    <SSL_Proxy>				https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {2}
-                    <ThreatView_HC>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {4}"
+blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-ip/main/abuseipdb-s100.ipv4  {8}
+					<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {16}
+                    <C2Intel>				https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv  {8}
+                    <C2Intel_unv>			https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/unverified/IPC2s.csv  {16}
+                    <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {32}
+					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {4}
+                    <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {16}
+                    <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {8}
+                    <ET_Block>				https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {16}
+                    <ET_Compromised>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {16}
+                    <GreenSnow>				https://blocklist.greensnow.co/greensnow.txt  {4}
+                    <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {8}
+                    <India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {32}
+                    <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {32}
+                    <NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {32}
+                    <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {32}
+                    <Socks4_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {4}
+                    <Socks5_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {4}
+                    <SouthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {32}
+                    <Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {24}
+                    <Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {24}
+                    <SSL_Proxy>				https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {4}
+                    <ThreatView_HC>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {16}"
 blocklist_ip=""
 blocklist_domain=""
 
 passlist_ip="       45.90.28.0
                     45.90.30.0
                     188.172.192.71
-                    192.36.27.86
+                    38.175.117.129
                     188.172.223.3
                     217.146.31.87
                     146.19.3.129
@@ -103,12 +103,6 @@ passlist_ip="       45.90.28.0
                     103.10.4.85
                     137.66.52.69
                     76.76.2.11
-                    81.3.6.162
-                    81.3.6.163
-                    81.3.6.164
-                    81.3.6.165
-                    81.3.6.166
-                    81.3.6.167
                     51.15.12.186"
 passlist_domain=""
 
@@ -787,7 +781,7 @@ case "$command" in
 		load_Domain
 		download_Set
 		cru d Skynet_update; minutes=$(( ($(date +%M) + 14) % 15))
-		cru a Skynet_update "19 * * * * nice -n 19 /jffs/scripts/firewall update cru"
+		cru a Skynet_update "$((minutes + 0)),$((minutes + 15)),$((minutes + 30)),$((minutes + 45)) * * * * nice -n 19 /jffs/scripts/firewall update cru"
 		update_Counter "$dir_system/updatecount" >/dev/null
 		footer
 	;;
