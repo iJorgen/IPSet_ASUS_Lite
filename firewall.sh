@@ -70,12 +70,12 @@ blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/block
                     <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {32}
                     <NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {32}
                     <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {32}
-                    <Socks4_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {4}
-                    <Socks5_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {4}
+                    <Socks4_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {8}
+                    <Socks5_Proxy>			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {8}
                     <SouthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {32}
                     <Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {24}
                     <Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {24}
-                    <SSL_Proxy>				https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {4}
+                    <SSL_Proxy>				https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {8}
                     <ThreatView_HC>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {16}"
 blocklist_ip=""
 blocklist_domain=""
