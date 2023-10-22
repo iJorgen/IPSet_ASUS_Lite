@@ -54,26 +54,11 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="		<AbuseIPDB>				https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-1d.ipv4  {8}
-					<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {16}
-                    <C2Intel>				https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv  {8}
-                    <C2Intel_unv>			https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/unverified/IPC2s.csv  {16}
-                    <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {32}
-					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {8}
-                    <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {16}
-                    <DanMe_TOR>				https://iplists.firehol.org/files/dm_tor.ipset  {8}
-                    <ET_Block>				https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {16}
-                    <ET_Compromised>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {16}
-                    <GreenSnow>				https://blocklist.greensnow.co/greensnow.txt  {8}
-                    <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {8}
-                    <India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {32}
-                    <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {32}
-                    <NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {32}
-                    <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {32}
-                    <SouthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kr-aggregated.zone  {32}
-                    <Spamhaus_drop>			https://www.spamhaus.org/drop/drop.txt  {24}
-                    <Spamhaus_edrop>		https://www.spamhaus.org/drop/edrop.txt  {24}
-                    <ThreatView_HC>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {16}"
+blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {12}
+                    <C2Intel>				https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s.csv  {8}
+					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {4}
+                    <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {12}
+                    <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {8}"
 blocklist_ip=""
 blocklist_domain=""
 
