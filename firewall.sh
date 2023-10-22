@@ -54,11 +54,7 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {12}
-                    <C2Intel>				https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s.csv  {8}
-					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {4}
-                    <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {12}
-                    <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {8}"
+blocklist_set="		<IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {8}"
 blocklist_ip=""
 blocklist_domain=""
 
