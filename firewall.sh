@@ -55,7 +55,6 @@ logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {12}
-					<CIArmy>				https://cinsscore.com/list/ci-badguys.txt  {8}
                     <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {12}
                     <ET_Block>				https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {16}
                     <ET_Compromised>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {16}
