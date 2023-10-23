@@ -6,9 +6,6 @@ Skynet Lite relies on the IPTables from Skynet by Adamm.
 ## Key features
 - Small one file shell script, no need for an external USB drive.
 - Additional Threat Intelligence Sources added.
-- Block TOR
-- Block Proxies (SSL, Socks4, Socks5)
-- Block top hacking countries (Russia, China, India, N Korea, S Korea, Iran)
 - Support for plain text gzip transfer-encoding.
 - Only download and update changed blocklist sets.
 - Use incremental update for all blocklist sets.
