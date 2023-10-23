@@ -54,12 +54,11 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="		<BinaryDefense>			https://www.binarydefense.com/banlist.txt  {12}
+blocklist_set="		<AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-1d.ipv4  {8}
+                    <BinaryDefense>			https://www.binarydefense.com/banlist.txt  {12}
                     <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {12}
-                    <ET_Block>				https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {16}
-                    <ET_Compromised>		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {16}
-                    <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {12}
-                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {16}"
+                    <IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {8}
+                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {12}"
 blocklist_ip=""
 blocklist_domain=""
 
