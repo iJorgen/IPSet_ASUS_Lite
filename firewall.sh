@@ -60,10 +60,10 @@ blocklist_set="		<AbuseIPDB>             https://raw.githubusercontent.com/bores
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {11}
                     <DanMeTOR>				https://iplists.firehol.org/files/dm_tor.ipset  {5}
                     <ET_Block>				https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {19}
-                    <ET_Comp>       		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {19}
 	 				<IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
                     <MalwareFilter>			https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt  {13}
-                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {23}"
+                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {23}
+					<ZoneFiles>             https://zonefiles.io/f/compromised/ip/live/compromised_ip_live.txt  {11}"
 blocklist_ip=""
 blocklist_domain=""
 
