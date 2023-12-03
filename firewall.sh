@@ -62,7 +62,7 @@ blocklist_set="		<AbuseIPDB>             https://raw.githubusercontent.com/bores
                     <EmergingThreats>		https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {13}
 	 				<IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
                     <MalwareFilter>			https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt  {11}
-                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {23}
+                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {17}
 					<ZoneFiles>             https://zonefiles.io/f/compromised/ip/live/compromised_ip_live.txt  {17}"
 blocklist_ip=""
 blocklist_domain=""
