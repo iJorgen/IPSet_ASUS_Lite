@@ -56,11 +56,14 @@ loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="		<AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-1d.ipv4  {3}
                     <BinaryDefense>			https://www.binarydefense.com/banlist.txt  {17}
-                    <CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {11}
+					<C2Intel>				https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv  {7}
+					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {11}
                     <DanMeTOR>				https://iplists.firehol.org/files/dm_tor.ipset  {5}
-					<IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
+                    <ET_Block>				https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {19}
+                    <ET_Comp>       		https://rules.emergingthreats.net/blockrules/compromised-ips.txt  {19}
+	 				<IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
                     <MalwareFilter>			https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt  {13}
-                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {19}"
+                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {23}"
 blocklist_ip=""
 blocklist_domain=""
 
