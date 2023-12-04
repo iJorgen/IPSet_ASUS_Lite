@@ -58,12 +58,12 @@ blocklist_set="		<AbuseIPDB>             https://raw.githubusercontent.com/bores
                     <BinaryDefense>			https://www.binarydefense.com/banlist.txt  {13}
 					<C2IntelFeeds>			https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv  {5}
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {11}
-                    <DanMeTOR>				https://iplists.firehol.org/files/dm_tor.ipset  {7}
-                    <EmergingThreats>		https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {13}
+                    <EmergingThreats>		https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {17}
 	 				<IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
                     <MalwareFilter>			https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt  {11}
-                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {17}
-					<ZoneFiles>             https://zonefiles.io/f/compromised/ip/live/compromised_ip_live.txt  {17}"
+                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {13}
+                    <TorExits>				https://iplists.firehol.org/files/tor_exits.ipset  {7}
+	 				<ZoneFiles>             https://zonefiles.io/f/compromised/ip/live/compromised_ip_live.txt  {17}"
 blocklist_ip=""
 blocklist_domain=""
 
