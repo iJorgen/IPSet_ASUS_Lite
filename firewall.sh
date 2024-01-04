@@ -62,7 +62,7 @@ blocklist_set="		<AbuseIPDB>             https://raw.githubusercontent.com/bores
 					<EmergingThreats>		https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {17}
 	 				<HttpProxy>  			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {11}
 	 				<IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
-                    <MalwareFilter>			https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt  {11}
+                    <MalwareFilter>			https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt  {13}
 	 				<Socks4Proxy>  			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {11}
 	 				<Socks5Proxy>  			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {11}
                     <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {13}"
