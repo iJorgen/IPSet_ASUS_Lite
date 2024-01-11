@@ -58,8 +58,9 @@ blocklist_set="		<AbuseIPDB>             https://raw.githubusercontent.com/bores
                     <BinaryDefense>			https://www.binarydefense.com/banlist.txt  {13}
 					<C2IntelFeeds>			https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv  {5}
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {17}
-                    <DanMeTOR>				https://iplists.firehol.org/files/dm_tor.ipset  {7}
+					<DanMeTOR>				https://iplists.firehol.org/files/dm_tor.ipset  {7}
 					<EmergingThreats>		https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {17}
+	 				<FullBogons>			https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt  {19}
 	 				<HttpProxy>  			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {11}
 	 				<IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
                     <MalwareFilter>			https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt  {13}
