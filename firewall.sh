@@ -60,13 +60,14 @@ blocklist_set="		<AbuseIPDB>             https://raw.githubusercontent.com/bores
 					<CiscoTalos>			https://www.talosintelligence.com/documents/ip-blacklist  {17}
 					<DanMeTOR>				https://iplists.firehol.org/files/dm_tor.ipset  {7}
 					<EmergingThreats>		https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {17}
-	 				<FullBogons>			https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt  {23}
+	 				<FullBogons>			https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt  {19}
 	 				<HttpProxy>  			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {11}
 	 				<IPSum>					https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
                     <MalwareFilter>			https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt  {13}
 	 				<Socks4Proxy>  			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {11}
 	 				<Socks5Proxy>  			https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {11}
-                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {13}"
+                    <ThreatView>			https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {13}
+					<ZoneFiles>             https://zonefiles.io/f/compromised/ip/live/compromised_ip_live.txt  {17}"
 blocklist_ip=""
 blocklist_domain=""
 
