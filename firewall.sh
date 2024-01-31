@@ -66,6 +66,7 @@ blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/bo
 					<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {11}
 	 				<ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {7}
 					<ThreatView>            https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {17}
+	 				<USOM>					https://raw.githubusercontent.com/elliotwutingfeng/USOM-Blocklists/main/ips.txt  {23}
 	 				<ZoneFiles>				https://zonefiles.io/f/compromised/ip/live/compromised_ip_live.txt  {19}"
 blocklist_ip=""
 blocklist_domain=""
