@@ -55,15 +55,17 @@ logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-3d.ipv4  {5}
-                    <BinaryDefense>         https://www.binarydefense.com/banlist.txt  {11}
+                    <BinaryDefense>         https://www.binarydefense.com/banlist.txt  {13}
 					<C2IntelFeeds>          https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv  {5}
-                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {17}
+                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {19}
                     <DanMeTOR>              https://iplists.firehol.org/files/dm_tor.ipset  {11}
                     <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {13}
 					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
-                    <MalwareFilter>         https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt  {13}
+                    <MalwareFilter>         https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-dnscrypt-blocked-ips.txt  {17}
 					<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {7}
-					<ThreatView>            https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {17}"
+	 				<ThreatFox>				https://raw.githubusercontent.com/elliotwutingfeng/ThreatFox-IOC-IPs/main/ips.txt  {11}
+					<ThreatView>            https://threatview.io/Downloads/IP-High-Confidence-Feed.txt  {17}
+	 				<ZoneFiles>				https://zonefiles.io/f/compromised/ip/live/compromised_ip_live.txt  {19}"
 blocklist_ip=""
 blocklist_domain=""
 
