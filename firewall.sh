@@ -60,6 +60,7 @@ blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/bo
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {17}
                     <DanMeTOR>              https://iplists.firehol.org/files/dm_tor.ipset  {7}
                     <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {13}
+					<Hackers>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {17}
                     <Hagezi>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {11}
 					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
 					<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {11}"
