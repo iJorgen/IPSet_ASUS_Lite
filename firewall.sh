@@ -54,7 +54,7 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-3d.ipv4  {5}
+blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-7d.ipv4  {5}
                     <BinaryDefense>         https://www.binarydefense.com/banlist.txt  {13}
 					<C2IntelFeeds>          https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv  {5}
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {17}
