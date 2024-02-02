@@ -56,12 +56,16 @@ loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-7d.ipv4  {5}
                     <BinaryDefense>         https://www.binarydefense.com/banlist.txt  {13}
-                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {17}
+                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {13}
                     <DanMeTOR>              https://iplists.firehol.org/files/dm_tor.ipset  {7}
                     <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {13}
+                    <FullBogons>            https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt  {19}
                     <Hagezi>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {11}
+                    <HttpProxy>             https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {17}
 					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
-					<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {11}"
+					<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {11}
+					<Socks4Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {17}
+                    <Socks5Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {17}"
 blocklist_ip=""
 blocklist_domain=""
 
