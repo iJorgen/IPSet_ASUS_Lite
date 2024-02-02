@@ -55,17 +55,17 @@ logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-7d.ipv4  {5}
-                    <BinaryDefense>         https://www.binarydefense.com/banlist.txt  {13}
-                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {13}
+                    <BinaryDefense>         https://www.binarydefense.com/banlist.txt  {11}
+                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {11}
                     <DanMeTOR>              https://iplists.firehol.org/files/dm_tor.ipset  {7}
-                    <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {13}
-                    <FullBogons>            https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt  {19}
-                    <Hagezi>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {11}
-                    <HttpProxy>             https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {17}
+                    <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {11}
+                    <FullBogons>            https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt  {17}
+                    <Hagezi>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {7}
+                    <HttpProxy>             https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {13}
 					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
-					<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {11}
-					<Socks4Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {17}
-                    <Socks5Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {17}"
+					<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {5}
+					<Socks4Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {13}
+                    <Socks5Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {13}"
 blocklist_ip=""
 blocklist_domain=""
 
