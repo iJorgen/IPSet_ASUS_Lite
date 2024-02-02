@@ -60,10 +60,10 @@ blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/bo
                     <DanMeTOR>              https://iplists.firehol.org/files/dm_tor.ipset  {7}
                     <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {11}
                     <FullBogons>            https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt  {17}
-                    <Hagezi>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {7}
+                    <Hagezi>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}
                     <HttpProxy>             https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {13}
 					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
-					<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {5}
+					<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {7}
 					<Socks4Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {13}
                     <Socks5Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {13}"
 blocklist_ip=""
