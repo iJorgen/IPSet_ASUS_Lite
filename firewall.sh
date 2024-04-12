@@ -54,25 +54,16 @@ logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-7d.ipv4  {5}
-                    <Belarus>				https://www.ipdeny.com/ipblocks/data/aggregated/by-aggregated.zone  {31}
                     <BinaryDefense>         https://www.binarydefense.com/banlist.txt  {11}
-                    <China>					https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone  {31}
 					<CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {11}
                     <DanMeTOR>              https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {7}
                     <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {11}
                     <Hagezi>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}
                     <HttpProxy>             https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {13}
-					<India>					https://www.ipdeny.com/ipblocks/data/aggregated/in-aggregated.zone  {31}				
-	 				<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
-                    <Iran>					https://www.ipdeny.com/ipblocks/data/aggregated/ir-aggregated.zone  {31}
-                    <Nigeria>				https://www.ipdeny.com/ipblocks/data/aggregated/ng-aggregated.zone  {31}
-                    <NorthKorea>			https://www.ipdeny.com/ipblocks/data/aggregated/kp-aggregated.zone  {31}
-                    <Romania>				https://www.ipdeny.com/ipblocks/data/aggregated/ro-aggregated.zone  {31}
-                    <Russia>				https://www.ipdeny.com/ipblocks/data/aggregated/ru-aggregated.zone  {31}
+					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
 	 				<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {7}
 					<Socks4Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {13}
-                    <Socks5Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {13}
-					<Ukraine>				https://www.ipdeny.com/ipblocks/data/aggregated/ua-aggregated.zone  {31}"
+                    <Socks5Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {13}"
 blocklist_ip=""
 blocklist_domain=""
 
