@@ -56,7 +56,8 @@ loginvalid="disabled"	# enabled | disabled
 blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-7d.ipv4  {5}
                     <BinaryDefense>         https://www.binarydefense.com/banlist.txt  {11}
 					<CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {11}
-                    <DanMeTOR>              https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {7}
+                    <GeoBlock>				https://raw.githubusercontent.com/iJorgen/IPSet_ASUS_Lite/master/geoblock  {7}
+					<DanMeTOR>              https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {5}
                     <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {11}
                     <Hagezi>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}
                     <HttpProxy>             https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {13}
