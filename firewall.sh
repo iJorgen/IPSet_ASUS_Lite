@@ -54,16 +54,13 @@ logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-7d.ipv4  {5}
-                    <BinaryDefense>         https://www.binarydefense.com/banlist.txt  {11}
+                    <BinaryDefense>         https://www.binarydefense.com/banlist.txt  {13}
 					<CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {11}
-					<DanMeTOR>              https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {5}
+					<DanMeTOR>              https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {7}
                     <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {11}
                     <Hagezi>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}
-                    <HttpProxy>             https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt  {13}
 					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
-	 				<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {7}
-					<Socks4Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt  {13}
-                    <Socks5Proxy>           https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt  {13}"
+	 				<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {13}"
 blocklist_ip=""
 blocklist_domain=""
 
@@ -654,7 +651,7 @@ option="$2"
 throttle=0
 updatecount=0
 iotblocked="disabled"
-version="3.8.4"
+version="3.8.5"
 useragent="$(curl -V | grep -Eo '^curl.+)') Skynet-Lite/$version https://github.com/wbartels/IPSet_ASUS_Lite"
 lockfile="/var/lock/skynet.lock"
 
