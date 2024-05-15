@@ -55,12 +55,12 @@ loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-7d.ipv4  {5}
                     <BinaryDefense>         https://www.binarydefense.com/banlist.txt  {13}
-					<CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {11}
-					<DanMeTOR>              https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {7}
+                    <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {11}
+                    <DanMeTOR>              https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {7}
                     <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {11}
-                    <Hagezi>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}
-					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
-	 				<Scanners>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {13}"
+                    <HageziDOH>             https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/doh.txt  {17}
+                    <IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
+                    <Scanners>              https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {13}"
 blocklist_ip=""
 blocklist_domain=""
 
@@ -68,9 +68,21 @@ passlist_ip="       45.90.28.0
                     45.90.30.0
                     188.172.192.71
                     38.175.117.129
-                    188.172.223.3
                     217.146.31.87
                     146.19.3.129
+                    188.172.223.3
+					1.1.1.1
+	 				8.8.8.8
+	 				8.8.4.4
+	  				208.67.222.222
+	   				208.67.220.220
+                    94.140.14.49
+                    76.76.2.11
+                    185.199.108.153
+                    185.199.109.153
+                    185.199.110.153
+                    185.199.111.153
+                    137.66.7.89
                     37.120.149.148
                     95.179.134.211
 					5.42.72.83
@@ -78,7 +90,6 @@ passlist_ip="       45.90.28.0
 					203.107.6.88
                     178.255.154.59
                     193.9.112.136
-                    94.140.14.49
                     188.114.96.1
                     188.114.97.1
                     104.21.10.13
@@ -89,7 +100,6 @@ passlist_ip="       45.90.28.0
                     172.67.69.149
                     103.10.4.85
                     137.66.52.69
-                    76.76.2.11
                     51.15.12.186"
 passlist_domain=""
 
