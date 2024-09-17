@@ -59,8 +59,8 @@ blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/bo
                     <CiscoTalos>            https://www.talosintelligence.com/documents/ip-blacklist  {11}
                     <DanMeTOR>              https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {7}
                     <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {11}
-					<Hackers>				https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Malware/Hackers  {17}
-                    <Hagezi>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}
+					<HageziDNS>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/doh.txt  {17}
+                    <HageziTIF>				https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}
 					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
                     <Scanners>              https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {17}"
 blocklist_ip=""
@@ -83,11 +83,8 @@ passlist_ip="       45.90.28.0
                     94.140.14.49
                     76.76.2.11
 					76.76.2.42
-                    185.199.108.153
-                    185.199.109.153
-                    185.199.110.153
-                    185.199.111.153
-                    137.66.7.89"
+                    137.66.7.89
+					98.128.175.45"
 passlist_domain=""
 
 
