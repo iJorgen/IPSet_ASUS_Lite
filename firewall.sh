@@ -53,12 +53,12 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-7d.ipv4  {5}
-                    <CIArmy>                https://cinsscore.com/list/ci-badguys.txt  {7}
+blocklist_set="     <CIArmy>                https://cinsscore.com/list/ci-badguys.txt  {7}
                     <DanMeTOR>              https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {11}
                     <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {13}
-                    <Hagezi>                https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}
-					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
+                    <Greensnow>				https://blocklist.greensnow.co/greensnow.txt  {7}
+					<Hagezi>                https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}
+					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {5}
                     <Scanners>              https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {11}"
 blocklist_ip=""
 blocklist_domain=""
