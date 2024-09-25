@@ -55,7 +55,7 @@ loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="     <CIArmy>                https://cinsscore.com/list/ci-badguys.txt  {7}
                     <DanMeTOR>              https://raw.githubusercontent.com/borestad/firehol-mirror/refs/heads/main/dm_tor.ipset  {11}
-					<DoH>					https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/ips/doh.txt  {13}
+					<BypassDNS>             https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/ips/doh.txt  {13}
                     <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {13}
                     <Greensnow>				https://blocklist.greensnow.co/greensnow.txt  {7}
 					<Hagezi>                https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/ips/tif.txt  {5}
