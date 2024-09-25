@@ -53,10 +53,11 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="     <CIArmy>                https://cinsscore.com/list/ci-badguys.txt  {7}
-                    <DanMeTOR>              https://raw.githubusercontent.com/borestad/firehol-mirror/refs/heads/main/dm_tor.ipset  {11}
-					<BypassDNS>             https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/ips/doh.txt  {13}
-                    <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {13}
+blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/refs/heads/main/abuseipdb-s100-1d.ipv4  {5}
+                    <CIArmy>                https://cinsscore.com/list/ci-badguys.txt  {7}
+                    <DanMeTOR>              https://raw.githubusercontent.com/borestad/firehol-mirror/refs/heads/main/dm_tor.ipset  {7}
+					<DoH>                   https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/ips/doh.txt  {11}
+                    <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {11}
                     <Greensnow>				https://blocklist.greensnow.co/greensnow.txt  {7}
 					<Hagezi>                https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/ips/tif.txt  {5}
 					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/refs/heads/master/levels/2.txt  {5}
@@ -82,7 +83,9 @@ passlist_ip="       45.90.28.0
                     76.76.2.11
 					76.76.2.42
                     137.66.7.89
-					98.128.175.45"
+					98.128.175.45
+	                158.233.249.230
+                    158.233.249.231"
 passlist_domain=""
 
 
