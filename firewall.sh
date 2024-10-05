@@ -54,10 +54,10 @@ logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/refs/heads/main/abuseipdb-s100-3d.ipv4  {5}
-                    <CIArmy>                https://cinsscore.com/list/ci-badguys.txt  {7}
+                    <CIArmy>                https://raw.githubusercontent.com/borestad/firehol-mirror/refs/heads/main/ciarmy.ipset  {7}
                     <TOR>                   https://raw.githubusercontent.com/borestad/firehol-mirror/refs/heads/main/dm_tor.ipset  {5}
-                    <EmergingThreats>       https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt  {11}
-                    <GreenSnow>				https://blocklist.greensnow.co/greensnow.txt  {7}
+                    <EmergingThreats>       https://raw.githubusercontent.com/borestad/firehol-mirror/refs/heads/main/et_block.netset  {11}
+                    <GreenSnow>				https://raw.githubusercontent.com/borestad/firehol-mirror/refs/heads/main/greensnow.ipset  {7}
 					<Hagezi>                https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/ips/tif.txt  {5}
 					<IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/refs/heads/master/levels/2.txt  {7}
                     <Scanners>              https://raw.githubusercontent.com/ShadowWhisperer/IPs/refs/heads/master/Other/Scanners  {11}"
