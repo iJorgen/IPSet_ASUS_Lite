@@ -54,13 +54,13 @@ logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-3d.ipv4  {5}
-                    <CIArmy>                https://raw.githubusercontent.com/borestad/firehol-mirror/main/ciarmy.ipset  {7}
-                    <EmergingThreats>       https://raw.githubusercontent.com/borestad/firehol-mirror/main/et_block.netset  {13}
-                    <GreenSnow>             https://raw.githubusercontent.com/borestad/firehol-mirror/main/greensnow.ipset  {11}
+                    <CIArmy>                https://raw.githubusercontent.com/borestad/firehol-mirror/main/ciarmy.ipset  {5}
+                    <EmergingThreats>       https://raw.githubusercontent.com/borestad/firehol-mirror/main/et_block.netset  {5}
+                    <GreenSnow>             https://raw.githubusercontent.com/borestad/firehol-mirror/main/greensnow.ipset  {5}
                     <Hagezi>                https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}
-                    <IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {7}
-                    <Scanners>              https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {13}
-                    <TOR>                   https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {11}"
+                    <IPSum>                 https://raw.githubusercontent.com/stamparm/ipsum/master/levels/2.txt  {5}
+                    <Scanners>              https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {5}
+                    <TOR>                   https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {5}"
 blocklist_ip=""
 blocklist_domain=""
 
