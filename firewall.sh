@@ -53,7 +53,7 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-3d.ipv4  {5}
+blocklist_set="     <AbuseIPDB>             https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/main/abuseipdb-s100-1d.ipv4  {5}
                     <CIArmy>                https://raw.githubusercontent.com/borestad/firehol-mirror/main/ciarmy.ipset  {5}
                     <EmergingThreats>       https://raw.githubusercontent.com/borestad/firehol-mirror/main/et_block.netset  {5}
                     <GreenSnow>             https://raw.githubusercontent.com/borestad/firehol-mirror/main/greensnow.ipset  {5}
@@ -71,6 +71,7 @@ passlist_ip="       45.90.28.0
                     217.146.31.87
                     146.19.3.129
                     188.172.223.3
+					95.179.134.211
                     38.175.118.175
                     1.1.1.1
                     8.8.8.8
