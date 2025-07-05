@@ -55,7 +55,7 @@ loginvalid="disabled"	# enabled | disabled
 
 blocklist_set="     <CIArmy>                https://raw.githubusercontent.com/borestad/firehol-mirror/main/ciarmy.ipset  {5}
                     <EmergingThreats>       https://raw.githubusercontent.com/borestad/firehol-mirror/main/et_block.netset  {5}
-                    <Hagezi>                https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}
+                    <HaGeZi>                https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}
                     <Scanners>              https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {5}
                     <TOR>                   https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {5}"
 blocklist_ip=""
