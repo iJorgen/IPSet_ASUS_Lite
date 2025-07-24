@@ -190,7 +190,8 @@ filter_IP_CIDR() {
 
 
 filter_set_IP_CIDR() {
-	sed -e "s/^ExitAddress //" |
+	sed -e 's/^ExitAddress //' |
+	sed -e 's/^.*"cidr":"//' |
 	grep -Eo '^(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])){3}(/(3[0-2]|[1-2][0-9]|[0-9]))?'
 }
 
@@ -234,42 +235,8 @@ filter_Skynet_Set() {
 download_Error() {
 	if [ "$1" = "22" ]; then # HTTP error code >= 400
 		printf "[*] Download error HTTP/%s " "$2"
-		case "$2" in
-			4[0-9][0-9]) printf "Client error" ;;
-			5[0-9][0-9]) printf "Server error" ;;
-					  *) printf "Unknown error" ;;
-		esac
 	else
-		printf "[*] Download error cURL (%s) " "$1"
-		case "$1" in
-			 1) printf "Unsupported protocol" ;;
-			 2) printf "Failed initialization" ;;
-			 3) printf "URL malformat" ;;
-			 4) printf "Not built in" ;;
-			 5) printf "Can't resolve proxy" ;;
-			 6) printf "Can't resolve host" ;;
-			 7) printf "Can't connect" ;;
-			 8) printf "Weird server reply" ;;
-			 9) printf "Remote access denied" ;;
-			18) printf "Partial file" ;;
-			23) printf "Write error" ;;
-			26) printf "Read error" ;;
-			27) printf "Out of memory" ;;
-			28) case "$2" in
-					000) printf "Connection timeout" ;;
-					  *) printf "Operation timeout" ;;
-				esac ;;
-			33) printf "Range error" ;;
-			35) printf "SSL connect error" ;;
-			36) printf "Bad download resume" ;;
-			47) printf "Too many redirects" ;;
-			52) printf "Empty reply from server" ;;
-			55) printf "Send error" ;;
-			56) printf "Receive error" ;;
-			60) printf "Peer failed verification" ;;
-			61) printf "Bad content encoding" ;;
-			 *) printf "Error returned by cURL" ;;
-		esac
+		printf "[*] Download error cURL/%s " "$1"
 	fi
 }
 
@@ -277,13 +244,13 @@ download_Error() {
 log_Skynet() {
 	logger -t skynet "$1"
 	echo " $1" >&2
-	echo "$(date '+%b %d %T') $1" >> "$dir_skynet/debug.log"
+	echo "$(date '+%b %d %T') $1" >> "$dir_skynet/update.log"
 }
 
 
 log_Tail() {
 	touch "$1"
-	if [ $(wc -l < "$1") -ge 1524 ]; then
+	if [ $(wc -l < "$1") -ge 1550 ]; then
 		tail -1500 "$1" > "$dir_temp/log" && mv -f "$dir_temp/log" "$1"
 	fi
 }
@@ -644,7 +611,7 @@ option="$2"
 throttle=0
 updatecount=0
 iotblocked="disabled"
-version="3.8.5"
+version="3.8.6"
 useragent="$(curl -V | grep -Eo '^curl.+)') Skynet-Lite/$version https://github.com/wbartels/IPSet_ASUS_Lite"
 lockfile="/var/lock/skynet.lock"
 
@@ -730,7 +697,7 @@ case "$command" in
 		log_Skynet "[i] Install"
 		rm -f "$dir_cache/"* "$dir_debug/"* "$dir_etag/"* "$dir_filtered/"*
 		rm -f "$dir_reload/"* "$dir_system/"* "$dir_temp/"* "$dir_update/"*
-		true > "$dir_skynet/debug.log"
+		true > "$dir_skynet/update.log"
 		touch "$dir_system/installtime"
 		if [ "$0" != "/jffs/scripts/firewall" ]; then
 			mv -f "$0" "/jffs/scripts/firewall"
@@ -829,10 +796,10 @@ case "$command" in
 	;;
 
 
-	debug)
-		header "Debug log"
-		if [ -s "$dir_skynet/debug.log" ]; then
-			cat "$dir_skynet/debug.log" | awk '{print " " $0}'
+	log)
+		header "Update log"
+		if [ -s "$dir_skynet/update.log" ]; then
+			cat "$dir_skynet/update.log" | awk '{print " " $0}'
 		else
 			echo " [i] Empty"
 		fi
@@ -842,7 +809,7 @@ case "$command" in
 
 	warning)
 		header "Warning log"
-		if ! cat "$dir_skynet/debug.log" | awk '{print " " $0}' | grep -E '[!]'; then
+		if ! cat "$dir_skynet/update.log" | awk '{print " " $0}' | grep -E '[!]'; then
 			echo " [i] Empty"
 		fi
 		footer
@@ -851,7 +818,7 @@ case "$command" in
 
 	error)
 		header "Error log"
-		if ! cat "$dir_skynet/debug.log" | awk '{print " " $0}' | grep -E '[*]'; then
+		if ! cat "$dir_skynet/update.log" | awk '{print " " $0}' | grep -E '[*]'; then
 			echo " [i] Empty"
 		fi
 		footer
@@ -906,7 +873,7 @@ case "$command" in
 		echo " firewall fresh"
 		echo " firewall frequency"
 		echo " firewall entries"
-		echo " firewall debug"
+		echo " firewall log"
 		echo " firewall warning"
 		echo " firewall error"
 		echo " firewall update"
@@ -930,4 +897,4 @@ esac
 
 
 rm -f "$dir_temp/"*
-log_Tail "$dir_skynet/debug.log"
+log_Tail "$dir_skynet/update.log"
