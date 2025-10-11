@@ -53,13 +53,11 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="     <CIArmy>            https://raw.githubusercontent.com/borestad/firehol-mirror/main/ciarmy.ipset  {4}
-                    <EmergingThreats>   https://raw.githubusercontent.com/borestad/firehol-mirror/main/et_block.netset  {4}
-                    <HaGeZi>            https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {4}
-                    <MaliciousIN>       https://raw.githubusercontent.com/romainmarcoux/malicious-ip/main/full-40k.txt  {4}
-                    <MaliciousOUT>      https://raw.githubusercontent.com/romainmarcoux/malicious-outgoing-ip/main/full-outgoing-ip-40k.txt  {4}
-                    <Scanners>          https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {4}
-                    <TOR>               https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {4}"
+blocklist_set="     <HaGeZi>        https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {4}
+                    <MalIN>         https://raw.githubusercontent.com/romainmarcoux/malicious-ip/main/full-40k.txt  {4}
+                    <MalOUT>        https://raw.githubusercontent.com/romainmarcoux/malicious-outgoing-ip/main/full-outgoing-ip-40k.txt  {4}
+                    <Scanner>       https://raw.githubusercontent.com/ShadowWhisperer/IPs/master/Other/Scanners  {4}
+                    <TOR>           https://raw.githubusercontent.com/borestad/firehol-mirror/main/dm_tor.ipset  {4}"
 blocklist_ip=""
 blocklist_domain=""
 
