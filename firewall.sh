@@ -53,9 +53,8 @@ filtertraffic="all"		# inbound | outbound | all
 logmode="enabled"		# enabled | disabled
 loginvalid="disabled"	# enabled | disabled
 
-blocklist_set="     <Inbound>    https://raw.githubusercontent.com/romainmarcoux/malicious-ip/main/full-aa.txt  {5}
-                    <Outbound>   https://raw.githubusercontent.com/bitwire-it/ipblocklist/main/outbound.txt  {5}
-                    <HaGeZi>     https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}"
+blocklist_set="     <Bitwire>   https://raw.githubusercontent.com/bitwire-it/ipblocklist/main/outbound.txt  {5}
+                    <HaGeZi>    https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips/tif.txt  {5}"
 blocklist_ip=""
 blocklist_domain=""
 
